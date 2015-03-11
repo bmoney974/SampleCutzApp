@@ -1,0 +1,109 @@
+body {
+    background: url("http://www.vectorbg.net/wp-content/uploads/2011/08/metal-grill-texture.jpg");
+}
+.main_wrapper {
+
+
+    background-color: #ffffff;
+
+}
+.main_content {
+
+}
+
+.logo, .advert
+{
+    padding-top:30px;
+
+}
+.advert img {
+    margin-left: 45px;
+}
+.nav_bar {
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.slider {
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+.dl_list_container {
+    margin-top:30px;
+    margin-left:50px;
+    z-index:101;
+
+}
+.signUp_continer {
+    margin-top:30px;
+    margin-left: 80px;
+
+}
+.videos {
+    margin-left: 35px;
+    margin-bottom: 30px;
+}
+.featured_tut {
+    margin-top: 60px;
+
+}
+
+.footer {
+    padding:40px;
+}
+
+.tuts {
+
+}
+
+.nav_row {
+    background-color: #99E2F2;
+}
+
+.signUp_modal {
+    width:300px;
+    position:relative;
+    top:-350px;
+    background-color: #ffffff;
+    margin: 0px auto;
+    z-index: 102;
+
+}
+
+.signUp_modal_home {
+    width:300px;
+    position:relative;
+    top:-650px;
+    background-color: #ffffff;
+    margin: 0px auto;
+    z-index: 102;
+
+}
+
+.signUp_table{
+    background-color: #ffffff;
+}
+
+.modal_bg{
+    width:100%;
+    height:100%;
+    background-color: gray;
+    opacity: .5;
+}
+
+.nav-pills :active{
+    background-color: #ffffff;
+}
+
+.logo {
+    background-color:#ffffff;
+}
+
+.profile_wrapper {
+    padding:20px;
+}
+
+.page_title, .cancel{
+    padding:20px;
+}

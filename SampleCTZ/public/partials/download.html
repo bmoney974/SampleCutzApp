@@ -1,0 +1,147 @@
+<div class="row main_wrapper">
+
+
+    <div class="row page_title" >
+        <div class="col-md-12">
+            <h2>Sound Library</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12"><!-- bread crumbs -->
+            <ol class="breadcrumb">
+                <li><a href="#/sounds">Genres</a></li>
+                <li><a href="#/genre">Rock</a></li>
+                <li><a href="#/download">Guitars</a></li>
+
+            </ol>
+        </div><!-- bread crumbs end -->
+    </div>
+
+    <div class="row" width="600"><!-- genres -->
+        <div class="col-md-12" style="margin-bottom: 30px;">
+            <table align="center" width="300" cellpadding="0" cellspacing="0" border="0" ><!-- dl list inner wrapper -->
+
+                <tr><td height="20"></td></td></tr>
+                <tr ng-repeat="sound in sounds">
+                    <td>
+                        <table cellpadding="0" cellspacing="0" border="0"><!-- audio track -->
+                            <tr>
+                                <td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td>
+                                                <table align="left">
+                                                    <tr>
+                                                        <td style="font-size:12px;">
+                                                            {{sound.name}}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+
+                                            <td>
+                                                <table align="right">
+                                                    <tr>
+                                                        <td style="font-size:12px;">
+                                                          {{sound.bpm}}  bpm
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls style="width:600px;>
+                                        <source src="horse.mp3" type="audio/mp3">
+                                    Your browser does not support the audio tag.
+                                    </audio>
+                                </td>
+
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td style=" font-size: 10px; padding-left:12px;">
+                                                Download
+                                            </td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>
+
+                                                <img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/02/download_arrow_icon.png" alt="download" width="30" height="auto"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table><!-- audio track -->
+                    </td>
+                </tr>
+
+                    </td>
+                </tr>
+            </table><!-- dl list inner wrapper -->
+        </div>
+    </div><!-- genres end -->
+
+    <div class="modal_bg">
+
+    </div>
+    <div class="signUp_modal"><!--log in modal -->
+        <table>
+            <tr>
+                <td>
+                    <table bgcolor="#ffffff" align="center" class="signUp_table" style="border: 2px solid #000000; ;"><!-- sign up form -->
+                        <tr>
+                            <td style="text-align:center;">
+                                <h4>Please Log In to Download Sounds</h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <form style="padding:20px">
+                                    <p>Username</p>
+                                    <input type="text" size="40"><br /><br />
+                                    <p>Password</p>
+                                    <input type="text" size="40"><br /><br />
+                                    <input type="submit" value="Login">
+                                    <table align="right">
+                                        <tr>
+                                            <td style="font-size:10px;">
+                                                <a href="">
+                                                    Register
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                    </table><!-- sign up form end -->
+                </td>
+                <td width="10"></td>
+                <td class="download" valign="top"  style="font-size: 20px; padding-left: 15px;">
+                    <span style="background-color: #ffffff; border:2px solid black; padding:5px;">X</span>
+                </td>
+            </tr>
+        </table>
+    </div><!--log in modal end -->
+
+    <script>
+        $(document).ready(function(){
+            $(".signUp_modal").hide();
+
+        });
+        $(".download").click(function(){
+            $(".signUp_modal").toggle(500);
+        });
+    </script>
+
+</div>
+
+
+

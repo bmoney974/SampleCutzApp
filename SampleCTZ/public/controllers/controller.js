@@ -13,6 +13,34 @@ var myApp = angular.module('myApp',[
                url:'/account',
                templateUrl:'partials/account.html'
            })
+           .state('download', {
+               url:'/download',
+               templateUrl:'partials/download.html'
+           })
+           .state('about', {
+               url:'/about',
+               templateUrl:'partials/about.html'
+           })
+           .state('genre', {
+               url:'/genre',
+               templateUrl:'partials/genre.html'
+           })
+           .state('learning', {
+               url:'/learning',
+               templateUrl:'partials/learning.html'
+           })
+           .state('sounds', {
+               url:'/sounds',
+               templateUrl:'partials/sounds.html'
+           })
+           .state('topics', {
+               url:'/topics',
+               templateUrl:'partials/topics.html'
+           })
+           .state('video', {
+               url:'/video',
+               templateUrl:'partials/video.html'
+           })
     }]);
 
 

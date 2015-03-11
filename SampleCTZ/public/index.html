@@ -12,12 +12,12 @@
 <body>
 <div class="container" ng-controller="AppCtrl">
 
-    <header ng-include="'partials/header.html'"></header>
+    <header class="header" ng-include="'partials/header.html'"></header>
 
-<div ui-view></div>
+<div class="row" ui-view></div>
 
 
-<footer ng-include="'partials/footer.html'"></footer>
+<footer class="row" ng-include="'partials/footer.html'"></footer>
 
 </div>
 
