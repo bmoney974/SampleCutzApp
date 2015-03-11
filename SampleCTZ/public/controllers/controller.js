@@ -7,39 +7,48 @@ var myApp = angular.module('myApp',[
        $stateProvider
            .state('home', {
                url:'/',
-               templateUrl: 'partials/home.html'
+               templateUrl: 'partials/home.html',
+               controller: 'AppCtrl'
            })
            .state('account', {
                url:'/account',
-               templateUrl:'partials/account.html'
+               templateUrl:'partials/account.html',
+               controller: 'AppCtrl'
            })
            .state('download', {
                url:'/download',
-               templateUrl:'partials/download.html'
+               templateUrl:'partials/download.html',
+               controller: 'AppCtrl'
            })
            .state('about', {
                url:'/about',
-               templateUrl:'partials/about.html'
+               templateUrl:'partials/about.html',
+               controller: 'AppCtrl'
            })
            .state('genre', {
                url:'/genre',
-               templateUrl:'partials/genre.html'
+               templateUrl:'partials/genre.html',
+               controller: 'AppCtrl'
            })
            .state('learning', {
                url:'/learning',
-               templateUrl:'partials/learning.html'
+               templateUrl:'partials/learning.html',
+               controller: 'AppCtrl'
            })
            .state('sounds', {
                url:'/sounds',
-               templateUrl:'partials/sounds.html'
+               templateUrl:'partials/sounds.html',
+               controller: 'AppCtrl'
            })
            .state('topics', {
                url:'/topics',
-               templateUrl:'partials/topics.html'
+               templateUrl:'partials/topics.html',
+               controller: 'AppCtrl'
            })
            .state('video', {
                url:'/video',
-               templateUrl:'partials/video.html'
+               templateUrl:'partials/video.html',
+               controller: 'AppCtrl'
            })
     }]);
 
@@ -48,10 +57,10 @@ var myApp = angular.module('myApp',[
 myApp.controller('AppCtrl', function($scope, $http){
     console.log("Hello World from controller");
     var refresh = function(){
-        $http.get('/contactlist').success(function(response){
+        $http.get('/sounds').success(function(response){
             console.log("I got the data i requested")
-            $scope.contactlist= response
-            $scope.contact ="";
+            $scope.sounds= response
+            $scope.sound ="";
         });
     };
     refresh();

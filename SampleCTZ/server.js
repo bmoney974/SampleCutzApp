@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var mongojs = require('mongojs');
-var db = mongojs(process.env.MONGO_URL || 'contactlist', ['contactlist']);
+var db = mongojs(process.env.MONGO_URL || 'sounds', ['sounds']);
 var bodyParser = require('body-parser');
 
 
@@ -11,10 +11,10 @@ app.use(bodyParser.json());
 
 
 // get data from database
-app.get('/contactlist', function(req, res) {
+app.get('/sounds', function(req, res) {
     console.log("I received a get request");
 
-    db.contactlist.find(function(err, docs){
+    db.sounds.find(function(err, docs){
         console.log(docs);
         res.json(docs);
     });
@@ -22,7 +22,7 @@ app.get('/contactlist', function(req, res) {
 });
 
 //send data to the database
-app.post('/contactlist', function(req, res){
+app.post('/sounds', function(req, res){
     console.log(req.body);
     db.contactlist.insert(req.body, function(err, doc){
         res.json(doc);
@@ -31,7 +31,7 @@ app.post('/contactlist', function(req, res){
 
 // delete data from database
 
-app.delete('/contactlist/:id', function(req, res){
+app.delete('/sounds/:id', function(req, res){
    var id = req.params.id;
     console.log(id);
     db.contactlist.remove({_id: mongojs.ObjectId(id)}, function(err, doc){
@@ -40,7 +40,7 @@ app.delete('/contactlist/:id', function(req, res){
 });
 
 
-app.get('/contactlist/:id', function(req, res){
+app.get('/sounds/:id', function(req, res){
    var id = req.params.id;
     console.log(id);
     db.contactlist.findOne({_id: mongojs.ObjectId(id)}, function(err, doc){
@@ -48,7 +48,7 @@ app.get('/contactlist/:id', function(req, res){
     });
 });
 
-app.put('/contactlist/:id', function(req, res){
+app.put('/sounds/:id', function(req, res){
    var id = req.params.id;
     console.log(req.body.name);
     db.contactlist.findAndModify({query: {_id: mongojs.ObjectId(id)},
