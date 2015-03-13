@@ -45,7 +45,7 @@ body {
     margin-bottom: 30px;
 }
 .featured_tut {
-    margin-top: 60px;
+
 
 }
 
@@ -55,10 +55,12 @@ body {
 
 .tuts {
 
+    margin-top:60px;
+
 }
 
 .nav_row {
-    background-color: #99E2F2;
+    background-color: #030500;
 }
 
 .signUp_modal {
@@ -106,4 +108,11 @@ body {
 
 .page_title, .cancel{
     padding:20px;
+}
+
+.main_hero{
+    margin-top: 30px;
+}
+
+.home_content{
 }

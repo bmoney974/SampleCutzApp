@@ -1,12 +1,49 @@
 
-<div class="row main_wrapper">
+<div class="row main_wrapper ">
 
 
-  <div class="row"><!-- Slider -->
-    <div class="col-md-12 slider">
-      <img src="http://samplecutz.com/wp-content/uploads/2015/02/slider-1.jpg" width="100% height=auto" alt="/>"
+  <div id="carousel-example-generic" class="carousel slide main_hero" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <a ui-sref="sounds">
+        <img src="http://samplecutz.com/wp-content/uploads/2015/03/scz_hero.jpg" alt="..." width="100%" height="auto">
+
+        <div class="carousel-caption">
+          ...
+        </div>
+        </a>
+      </div>
+
+      <div class="item">
+        <a ui-sref="sounds">
+        <img src="http://samplecutz.com/wp-content/uploads/2015/03/scz_hero.jpg" alt="..." width="100%" height="auto">
+        <div class="carousel-caption">
+          ...
+        </div>
+          </a>
+      </div>
+      ...
     </div>
-  </div><!-- Slider End -->
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 
   <div class="row main_content">
     <div class="row">
@@ -323,7 +360,7 @@
                     <table align="right">
                       <tr>
                         <td>
-                          <button class="btn btn-primary">Log In</button>
+                          <button class="btn btn-primary animated pulse infinite">Log In</button>
                         </td>
                       </tr>
                     </table>
@@ -361,10 +398,11 @@
     </div>
 
   </div>
+<hr />
 
+  <div class="row tuts">
 
-  <div width="960" class="row tuts" >
-    <div width="960" class="row featured_tut" >
+    <div  class="row featured_tut" >
       <h3 style="text-align: center; margin-bottom:20px;">Featured Tutorials</h3>
       <div class="row videos">
         <div class="col-md-4">
