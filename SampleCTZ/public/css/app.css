@@ -115,4 +115,15 @@ body {
 }
 
 .home_content{
+
+}
+
+.form_wrapper {
+   border: 1px solid #65968F;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -o-border-radius: 6px;
+    background: #E7E8E7;
+    box-shadow: 1px 2px 8px  #0e0e0e;
+
 }
