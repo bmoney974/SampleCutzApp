@@ -29,17 +29,35 @@
                     <label>Category</label>
                     <select>
                         <option>All</option>
-                        <option>Drums</option>
-                        <option>Guitars</option>
-                        <option>Strings</option>
-                        <option>Cinematic</option>
-                        <option>Effects</option>
+                        <option>Loops</option>
+                        <option>One Shots</option>
+                        <option>Arrangements</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Sort By</label>
+                    <select>
+                        <option>Recent</option>
+                        <option>Name</option>
+                        <option>BPM</option>
                     </select>
                 </div>
                 <fieldset>
                     <legend>Genres</legend>
                     <div class="form-group">
                         <label>Alternative</label>
+                        <input type="checkbox" />
+                    </div>
+                    <div class="form-group">
+                        <label>Blues</label>
+                        <input type="checkbox" />
+                    </div>
+                    <div class="form-group">
+                        <label>Cinematic</label>
+                        <input type="checkbox" />
+                    </div>
+                    <div class="form-group">
+                        <label>Country</label>
                         <input type="checkbox" />
                     </div>
                     <div class="form-group">
@@ -118,10 +136,10 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <audio controls style="width:500px;>
-                                        <source src="horse.mp3" type="audio/mp3">
-                                    Your browser does not support the audio tag.
+                                    <audio width="500" ng-src="{{sound.audio_link}}" controls="" loop name="media" type="audio/mpeg">
                                     </audio>
+                                    {{sound.audio_link}}
+
                                 </td>
 
                                 <td>

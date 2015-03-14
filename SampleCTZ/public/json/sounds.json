@@ -1,0 +1,53 @@
+{
+  name: 'Urban Bling',
+  category: 'Loop',
+  genre: 'Hip Hop',
+  bpm: 120,
+  audio_link: 'http://samplecutz.com/wp-content/uploads/2015/03/urban_bling_120bpm.mp3',
+  file_name: 'urban_bling_120bpm.mp3'
+}
+
+{
+name: 'Happy Clap',
+category: 'Loop',
+genre: 'Country',
+bpm: 98,
+audio_link: 'http://samplecutz.com/wp-content/uploads/2015/03/happy_clap_drums_98bpm.mp3',
+file_name: 'happy_clap_drums_98bpm.mp3'
+}
+
+{
+name: 'Happy Clap w/ Gtr',
+category: 'Loop',
+genre: 'Country',
+bpm: 98,
+audio_link: 'http://samplecutz.com/wp-content/uploads/2015/03/happy_clap_w-gtr_98bpm.mp3',
+file_name: 'happy_clap_w-gtr_98bpm.mp3'
+}
+
+{
+name: 'Hard Rock Full',
+category: 'Loop',
+genre: 'Rock',
+bpm: 125,
+audio_link: 'http://samplecutz.com/wp-content/uploads/2015/03/hard_rock_full_125bpm.mp3',
+file_name: 'hard_rock_full_125bpm.mp3'
+}
+
+{
+name: 'Hard Rock Gtr',
+category: 'Loop',
+genre: 'Rock',
+bpm: 125,
+audio_link: 'http://samplecutz.com/wp-content/uploads/2015/03/hard_rock_gtr_125bpm.mp3',
+file_name: 'hard_rock_gtr_125bpm.mp3'
+}
+
+{
+name: 'Coo Wah Gtrr',
+category: 'Loop',
+genre: 'Blues',
+bpm: 80,
+audio_link: 'http://samplecutz.com/wp-content/uploads/2015/03/coo_wah_gtr_80bpm.mp3',
+file_name: 'coo_wah_gtr_80bpm.mp3'
+}

@@ -1,7 +1,7 @@
 var myApp = angular.module('myApp',[
     'ui.router'
 ])
-    .config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider){
+    .config(['$urlRouterProvider', '$stateProvider', '$sceDelegateProvider', function($urlRouterProvider, $stateProvider, $sceDelegateProvider){
        $urlRouterProvider.otherwise('/');
 
        $stateProvider
@@ -49,7 +49,14 @@ var myApp = angular.module('myApp',[
                url:'/video',
                templateUrl:'partials/video.html',
                controller: 'AppCtrl'
-           })
+           });
+
+        $sceDelegateProvider.resourceUrlWhitelist([
+            // Allow same origin resource loads.
+            'self',
+            // Allow loading from our assets domain.  Notice the difference between * and **.
+            'http://samplecutz.com/**'
+        ]);
     }]);
 
 
