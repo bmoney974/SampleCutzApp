@@ -142,21 +142,30 @@ margin-bottom: 30px;
 
 .sidebar {
 
-  padding-left:50px;
+    padding-left:50px;
     position:static;
-    margin-top: -20px;
+    margin-top: 50px;
+
 
 }
 
 .sidebar-form {
 
-    /*border: 2px solid rgba(255, 0, 0, .1);*/
-    padding:50px;
+    border: 2px solid rgba(255, 0, 0, .1);
+    padding-left:50px;
+    padding-bottom:20px;
+    padding-right:50px;
+    background-color: #F2F2F2;
+    border-radius: 3px;
+    box-shadow: 1px 1px 10px rgba(37,42,46,.1);
+
+
 }
 
 .sounds-side {
     padding-right:60px;
     padding-top:50px;
+
 }
 
 .breadcrumb {
@@ -166,8 +175,13 @@ background: rgba(37,42,46,.1);
 
 .sound-table {
     padding-left:20px;
+
 }
 
 .top_dl {
     margin-top:60px;
+}
+
+.sidebar-ad {
+    margin-top: 20px;
 }
