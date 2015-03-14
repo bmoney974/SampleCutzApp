@@ -18,8 +18,9 @@
 
 
     <div class="row"><!-- sounds wrapper -->
-        <div class="col-md-4 sidebar"><!-- side bar -->
+        <div class="col-md-4 sidebar affix affix-top"><!-- side bar -->
             <form class="sidebar-form">
+                <h3 style="margin-bottom: 30px;">Filter Sounds</h3>
                 <div class="form-group">
                     <label>Search</label>
                     <input type="text" />
@@ -59,17 +60,95 @@
         </div><!-- side bar end -->
 
         <div class="col-md-8 sounds-side" style="margin-bottom: 30px;"><!-- sounds -->
-            <table class="table"  align="center" cellpadding="0" cellspacing="0" border="0">
+            <table class="table table-bordered" align="center"  ><!-- dl list inner wrapper -->
+                <tbody>
+               <th>Download Sounds</th>
                 <tr ng-repeat="sound in sounds">
-                    <td style="border:1px solid black; padding:10px;">
-                        <a href="#/genre">
-                        {{sound.genre}}
-                        </a>
+                    <td>
+                        <table class="sound-table" cellpadding="0" cellspacing="0" border="0"><!-- audio track -->
+
+                            <tr>
+                                <td>
+                                    <table width="100%">
+                                        <tr>
+                                            <td width="200">
+                                                <table align="center">
+                                                    <tr>
+                                                        <td style="font-size:14px;">
+                                                            <b>{{sound.name}}</b>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td width="200">
+                                                <table align="left">
+                                                    <tr>
+                                                        <td style="font-size:12px;">
+                                                        <b>Category:</b> {{sound.category}}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <table align="left">
+                                                    <tr>
+                                                        <td style="font-size:12px;">
+                                                            <b>Genre:</b> {{sound.genre}}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+
+
+                                            <td>
+                                                <table align="right">
+                                                    <tr>
+                                                        <td style="font-size:12px;">
+                                                            {{sound.bpm}}  bpm
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <audio controls style="width:600px;>
+                                        <source src="horse.mp3" type="audio/mp3">
+                                    Your browser does not support the audio tag.
+                                    </audio>
+                                </td>
+
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td style=" font-size: 10px; padding-left:12px;">
+                                                Download
+                                            </td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>
+
+                                                <img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/02/download_arrow_icon.png" alt="download" width="30" height="auto"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table><!-- audio track -->
                     </td>
                 </tr>
-            </table>
+
+                </td>
+                </tr>
+                </tbody>
+            </table><!-- dl list inner wrapper -->
         </div><!-- sounds end -->
     </div><!-- sounds wrapper end -->
+
 
 
 </div>

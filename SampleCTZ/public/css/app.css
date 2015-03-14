@@ -143,6 +143,9 @@ margin-bottom: 30px;
 .sidebar {
 
   padding-left:50px;
+    position:static;
+    margin-top: -20px;
+
 }
 
 .sidebar-form {
@@ -152,11 +155,19 @@ margin-bottom: 30px;
 }
 
 .sounds-side {
-    padding-right:30px;
+    padding-right:60px;
     padding-top:50px;
 }
 
 .breadcrumb {
+background: rgba(37,42,46,.1);
 
+}
 
+.sound-table {
+    padding-left:20px;
+}
+
+.top_dl {
+    margin-top:60px;
 }
