@@ -45,7 +45,7 @@ body {
     margin-bottom: 30px;
 }
 .featured_tut {
-
+margin-bottom: 30px;
 
 }
 
@@ -60,7 +60,7 @@ body {
 }
 
 .nav_row {
-    background-color: #030500;
+   background: url("http://samplecutz.com/wp-content/uploads/2015/03/navbg-1.jpg");
 }
 
 .signUp_modal {
@@ -125,5 +125,38 @@ body {
     -o-border-radius: 6px;
     background: #E7E8E7;
     box-shadow: 1px 2px 8px  #0e0e0e;
+
+}
+
+.hzr {
+    border: 0;
+    height: 1px;
+    background-color: darkgrey;
+    margin-left:20px;
+    margin-right:20px;
+    margin-top:60px;
+
+    opacity: 3;
+
+}
+
+.sidebar {
+
+  padding-left:50px;
+}
+
+.sidebar-form {
+
+    /*border: 2px solid rgba(255, 0, 0, .1);*/
+    padding:50px;
+}
+
+.sounds-side {
+    padding-right:30px;
+    padding-top:50px;
+}
+
+.breadcrumb {
+
 
 }

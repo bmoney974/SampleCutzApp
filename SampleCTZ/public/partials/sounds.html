@@ -10,15 +10,56 @@
     <div class="row">
         <div class="col-md-12"><!-- bread crumbs -->
             <ol class="breadcrumb">
-                <li><a href="#/sounds" class="active">Genres</a></li>
+                <li>&nbsp;</li>
 
             </ol>
         </div><!-- bread crumbs end -->
     </div>
 
-    <div class="row"><!-- genres -->
-        <div class="col-md-12" style="margin-bottom: 30px;">
-            <table width="600" align="center" cellpadding="10" cellspacing="0" border="0">
+
+    <div class="row"><!-- sounds wrapper -->
+        <div class="col-md-4 sidebar"><!-- side bar -->
+            <form class="sidebar-form">
+                <div class="form-group">
+                    <label>Search</label>
+                    <input type="text" />
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select>
+                        <option>All</option>
+                        <option>Drums</option>
+                        <option>Guitars</option>
+                        <option>Strings</option>
+                        <option>Cinematic</option>
+                        <option>Effects</option>
+                    </select>
+                </div>
+                <fieldset>
+                    <legend>Genres</legend>
+                    <div class="form-group">
+                        <label>Alternative</label>
+                        <input type="checkbox" />
+                    </div>
+                    <div class="form-group">
+                        <label>Hip Hop</label>
+                        <input type="checkbox" />
+                    </div>
+                    <div class="form-group">
+                        <label>Rock</label>
+                        <input type="checkbox" />
+                    </div>
+                    <div class="form-group">
+                        <label>Techno</label>
+                        <input type="checkbox" />
+                    </div>
+                </fieldset>
+
+            </form>
+        </div><!-- side bar end -->
+
+        <div class="col-md-8 sounds-side" style="margin-bottom: 30px;"><!-- sounds -->
+            <table class="table"  align="center" cellpadding="0" cellspacing="0" border="0">
                 <tr ng-repeat="sound in sounds">
                     <td style="border:1px solid black; padding:10px;">
                         <a href="#/genre">
@@ -27,9 +68,8 @@
                     </td>
                 </tr>
             </table>
-        </div>
-    </div><!-- genres end -->
-
+        </div><!-- sounds end -->
+    </div><!-- sounds wrapper end -->
 
 
 </div>
