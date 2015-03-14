@@ -63,12 +63,12 @@
         </div><!-- side bar end -->
 
         <div class="col-md-8 sounds-side" style="margin-bottom: 30px;"><!-- sounds -->
-            <table class="table " align="center"  ><!-- dl list inner wrapper -->
+            <table class="table table-bordered dl_table" width="400" align="center"  ><!-- dl list inner wrapper -->
                 <tbody>
-               <th>Download Sounds</th>
+               <th class="dl_heading" style="padding-left:100px;"><h2>Download Sounds</h2></th>
                 <tr ng-repeat="sound in sounds">
                     <td>
-                        <table class="sound-table" cellpadding="0" cellspacing="0" border="0"><!-- audio track -->
+                        <table align="center" widgh="400" class="sound-table" cellpadding="0" cellspacing="0" border="0"><!-- audio track -->
 
                             <tr>
                                 <td>
@@ -78,12 +78,12 @@
                                                 <table align="center">
                                                     <tr>
                                                         <td style="font-size:14px;">
-                                                            <b>{{sound.name}}</b>
+                                                            <b><h4>{{sound.name}}</h4></b>
                                                         </td>
                                                     </tr>
                                                 </table>
                                             </td>
-                                            <td width="200">
+                                            <td width="150">
                                                 <table align="left">
                                                     <tr>
                                                         <td style="font-size:12px;">
@@ -118,7 +118,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <audio controls style="width:600px;>
+                                    <audio controls style="width:500px;>
                                         <source src="horse.mp3" type="audio/mp3">
                                     Your browser does not support the audio tag.
                                     </audio>

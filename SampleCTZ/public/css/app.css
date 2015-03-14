@@ -1,5 +1,7 @@
 body {
     background: url("http://www.vectorbg.net/wp-content/uploads/2011/08/metal-grill-texture.jpg");
+    min-width:1100px;
+
 }
 .main_wrapper {
 
@@ -147,6 +149,7 @@ margin-bottom: 30px;
     margin-top: 50px;
 
 
+
 }
 
 .sidebar-form {
@@ -184,4 +187,13 @@ background: rgba(37,42,46,.1);
 
 .sidebar-ad {
     margin-top: 20px;
+}
+
+.dl_heading {
+    background:#1E1E1E;
+    color:#ffffff;
+}
+
+.dl_table {
+    padding-bottom:20px;
 }
