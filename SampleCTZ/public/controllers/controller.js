@@ -68,7 +68,10 @@ myApp.controller('AppCtrl', function($scope, $http){
             console.log("I got the data i requested")
             $scope.sounds= response
             $scope.sound ="";
+
+
         });
+        $scope.orderProp = '_id';
     };
     refresh();
    $scope.addContact = function(){

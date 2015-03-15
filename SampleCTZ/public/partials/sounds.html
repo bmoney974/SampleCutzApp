@@ -23,54 +23,56 @@
                 <h3 style="margin-bottom: 30px;">Filter Sounds</h3>
                 <div class="form-group">
                     <label>Search</label>
-                    <input type="text" />
+                    <input type="text" data-ng-model="searchSounds" />
                 </div>
                 <div class="form-group">
                     <label>Category</label>
-                    <select>
+                    <select >
                         <option>All</option>
-                        <option>Loops</option>
+                        <option value="">Loops</option>
                         <option>One Shots</option>
                         <option>Arrangements</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label>Sort By</label>
-                    <select>
-                        <option>Recent</option>
-                        <option>Name</option>
-                        <option>BPM</option>
+                    <select ng-model="orderProp">
+                        <option value="_id">Recent</option>
+                        <option value="name">Name</option>
+                        <option value="bpm">BPM Lowest</option>
+                        <option value="-bpm">BPM Highest</option>
                     </select>
                 </div>
                 <fieldset>
                     <legend>Genres</legend>
                     <div class="form-group">
                         <label>Alternative</label>
-                        <input type="checkbox" />
+                        <input data-ng-model="searchAlternative" type="checkbox" [ng-true-value="Alternative"]
+                               [ng-false-value=""] />
                     </div>
                     <div class="form-group">
                         <label>Blues</label>
-                        <input type="checkbox" />
+                        <input data-ng-model="searchBlues" type="checkbox" value="Blues"/>
                     </div>
                     <div class="form-group">
                         <label>Cinematic</label>
-                        <input type="checkbox" />
+                        <input data-ng-model="filterGenre" type="checkbox" value="Cinematic"/>
                     </div>
                     <div class="form-group">
                         <label>Country</label>
-                        <input type="checkbox" />
+                        <input data-ng-model="searchGenre" type="checkbox" value=""Country />
                     </div>
                     <div class="form-group">
                         <label>Hip Hop</label>
-                        <input type="checkbox" />
+                        <input data-ng-model="searchGenre" type="checkbox" value="Hip Hop" />
                     </div>
                     <div class="form-group">
                         <label>Rock</label>
-                        <input type="checkbox" />
+                        <input data-ng-model="searchGenre" type="checkbox" />
                     </div>
                     <div class="form-group">
                         <label>Techno</label>
-                        <input type="checkbox" />
+                        <input data-ng-model="searchGenre" type="checkbox" value="Techno" />
                     </div>
                 </fieldset>
                 <div>
@@ -84,7 +86,7 @@
             <table class="table table-bordered dl_table" width="400" align="center"  ><!-- dl list inner wrapper -->
                 <tbody>
                <th class="dl_heading" style="padding-left:100px;"><h2>Download Sounds</h2></th>
-                <tr ng-repeat="sound in sounds">
+                <tr ng-repeat="sound in sounds | filter:searchSounds | orderBy: orderProp | filter:searchAlternative | filter:searchBlues ">
                     <td>
                         <table align="center" widgh="400" class="sound-table" cellpadding="0" cellspacing="0" border="0"><!-- audio track -->
 
@@ -138,7 +140,7 @@
                                 <td>
                                     <audio width="500" ng-src="{{sound.audio_link}}" controls="" loop name="media" type="audio/mpeg">
                                     </audio>
-                                    {{sound.audio_link}}
+
 
                                 </td>
 
@@ -152,8 +154,8 @@
                                         <tr>
 
                                             <td>
-
-                                                <img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/02/download_arrow_icon.png" alt="download" width="30" height="auto"/>
+                                                <a href="{{sound.audio_link}}" download="{{sound.file_name}}">
+                                                <img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/02/download_arrow_icon.png" alt="download" width="30" height="auto"/></a>
                                             </td>
                                         </tr>
                                     </table>
