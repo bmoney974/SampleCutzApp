@@ -78,16 +78,7 @@ myApp.controller('AppCtrl', function($scope, $http){
             $scope.sounds= response
             $scope.sound ="";
 
-            $scope.genres = [
-                {name:"Hip Hop", on:false},
-                {name:"Blues", on:false},
-                {name:"Rock", on:false},
-                {name:"Country", on:false},
-                {name:"Techno", on:false},
-                {name:"Cinematic", on:false},
-                {name:"Alternative", on:false}
 
-            ];
 
             $scope.categories = [
                 {name:"Drums" },
@@ -96,34 +87,85 @@ myApp.controller('AppCtrl', function($scope, $http){
             ];
 
 
-            $scope.showAll = true;
-            $scope.checkChange = function() {
-                for(t in $scope.genres){
-                    if($scope.genres[t].on){
-                        $scope.showAll = false;
-                        return;
-                    }
-                }
-                $scope.showAll = true;
+            //$scope.showAll = true;
+            //$scope.checkChange = function() {
+            //    for(t in $scope.genres){
+            //        if($scope.genres[t].on){
+            //            $scope.showAll = false;
+            //            return;
+            //        }
+            //    }
+            //    $scope.showAll = true;
+            //};
+            //
+            //$scope.myFunc = function(a) {
+            //    if($scope.showAll) { return true; }
+            //
+            //    var sel = false;
+            //
+            //    for(genre in $scope.genres){
+            //        var t = $scope.genres[genre];
+            //        console.log(t);
+            //        if(t.on){
+            //            if(a.genre.indexOf(t.name) == -1){
+            //                return false;
+            //            }else{
+            //                sel = true;
+            //            }
+            //        }
+            //    }
+            //    return sel;
+            //};
+
+            $scope.filter = {};
+
+            $scope.getOptionsFor = function (propName) {
+                return ($scope.sounds || []).map(function (sound) {
+                    return sound[propName];
+                }).filter(function (sound, idx, arr) {
+                    return arr.indexOf(sound) === idx;
+                });
             };
 
-            $scope.myFunc = function(a) {
-                if($scope.showAll) { return true; }
+            $scope.filterByProperties = function (sound) {
 
-                var sel = false;
 
-                for(genre in $scope.genres){
-                    var t = $scope.genres[genre];
-                    console.log(t);
-                    if(t.on){
-                        if(a.genre.indexOf(t.name) == -1){
-                            return false;
-                        }else{
-                            sel = true;
-                        }
+
+                // Use this snippet for matching with OR
+                var matchesOR = true;
+                for (var prop in $scope.filter) {
+                    if (noSubFilter($scope.filter[prop])) continue;
+                    if (!$scope.filter[prop][sound[prop]]) {
+                        matchesOR = false;
+                    } else {
+                        matchesOR = true;
+                        break;
                     }
                 }
-                return sel;
+                return matchesOR;
+
+            };
+
+            function noSubFilter(subFilterObj) {
+                for (var key in subFilterObj) {
+                    if (subFilterObj[key]) return false;
+                }
+                return true;
+            }
+        });
+        myApp.filter('capitalizeFirst', function () {
+            return function (str) {
+                str = str || '';
+                return str.substring(0, 1).toUpperCase() + str.substring(1).toLowerCase();
+            };
+
+        });
+
+        myApp.filter('keys', function () {
+            return function (object) {
+                return Object.keys(object || {}).filter(function (key) {
+                    return key !== '$$hashKey';
+                });
             };
 
 
@@ -171,3 +213,10 @@ myApp.controller('AppCtrl', function($scope, $http){
 
 });
 
+myApp.filter('keys', function () {
+    return function (object) {
+        return Object.keys(object || {}).filter(function (key) {
+            return key !== '$$hashKey';
+        });
+    };
+});

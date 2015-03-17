@@ -43,12 +43,14 @@
                     </select>
                 </div>
                 <fieldset>
+                    <div ng-repeat="prop in sounds[0] | keys | filter:'genre' " ng-init="filter[prop]={}">
                     <legend>Genres</legend>
-                    <li style="list-style: none;" class="no-decoration" ng-repeat="genre in genres | orderBy: name">
+                    <li style="list-style: none;" class="no-decoration" class="quarter" ng-repeat="opt in getOptionsFor(prop) | filter:'!sound'">
                         <label>
-                            <input type="checkbox" ng-model="genre.on" ng-change="checkChange()" />&nbsp;{{genre.name}}</label>
+                            <input type="checkbox" type="checkbox" ng-model="filter[prop][opt]" />&nbsp;{{opt}}</label>
 
                     </li>
+                    </div>
                 </fieldset>
                 <div>
                     <img class="img-responsive sidebar-ad" src="http://samplecutz.com/wp-content/uploads/2015/03/att-ad.png" />
@@ -61,7 +63,7 @@
             <table class="table table-bordered dl_table" width="400" align="center"  ><!-- dl list inner wrapper -->
                 <tbody>
                <th class="dl_heading" style="padding-left:100px;"><h2>Download Sounds</h2></th>
-                <tr ng-repeat="sound in sounds | filter:searchSounds | orderBy: orderProp | filter:myFunc | filter:showCategory ">
+                <tr ng-repeat="sound in filtered=(sounds | filter:filterByProperties | orderBy: orderProp | filter:showCategory  )">
                     <td>
                         <table align="center" widgh="400" class="sound-table" cellpadding="0" cellspacing="0" border="0"><!-- audio track -->
 
