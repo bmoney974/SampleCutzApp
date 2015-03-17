@@ -63,7 +63,7 @@
             <table class="table table-bordered dl_table" width="400" align="center"  ><!-- dl list inner wrapper -->
                 <tbody>
                <th class="dl_heading" style="padding-left:100px;"><h2>Download Sounds</h2></th>
-                <tr ng-repeat="sound in filtered=(sounds | filter:filterByProperties | orderBy: orderProp | filter:showCategory  )">
+                <tr ng-repeat="sound in filtered=(sounds | filter:filterByProperties | orderBy: orderProp | filter:showCategory | filter:searchSounds  )">
                     <td>
                         <table align="center" widgh="400" class="sound-table" cellpadding="0" cellspacing="0" border="0"><!-- audio track -->
 
