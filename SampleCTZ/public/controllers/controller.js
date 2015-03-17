@@ -1,5 +1,7 @@
 var myApp = angular.module('myApp',[
     'ui.router'
+    //'ngResource',
+    //'myApp.filters'
 ])
     .config(['$urlRouterProvider', '$stateProvider', '$sceDelegateProvider', function($urlRouterProvider, $stateProvider, $sceDelegateProvider){
        $urlRouterProvider.otherwise('/');
@@ -51,6 +53,13 @@ var myApp = angular.module('myApp',[
                controller: 'AppCtrl'
            });
 
+
+
+
+
+
+
+
         $sceDelegateProvider.resourceUrlWhitelist([
             // Allow same origin resource loads.
             'self',
@@ -68,6 +77,55 @@ myApp.controller('AppCtrl', function($scope, $http){
             console.log("I got the data i requested")
             $scope.sounds= response
             $scope.sound ="";
+
+            $scope.genres = [
+                {name:"Hip Hop", on:false},
+                {name:"Blues", on:false},
+                {name:"Rock", on:false},
+                {name:"Country", on:false},
+                {name:"Techno", on:false},
+                {name:"Cinematic", on:false},
+                {name:"Alternative", on:false}
+
+            ];
+
+            $scope.categories = [
+                {name:"Drums" },
+                {name:"Loop"},
+                {name:"One Shots"}
+            ];
+
+
+            $scope.showAll = true;
+            $scope.checkChange = function() {
+                for(t in $scope.genres){
+                    if($scope.genres[t].on){
+                        $scope.showAll = false;
+                        return;
+                    }
+                }
+                $scope.showAll = true;
+            };
+
+            $scope.myFunc = function(a) {
+                if($scope.showAll) { return true; }
+
+                var sel = false;
+
+                for(genre in $scope.genres){
+                    var t = $scope.genres[genre];
+                    console.log(t);
+                    if(t.on){
+                        if(a.genre.indexOf(t.name) == -1){
+                            return false;
+                        }else{
+                            sel = true;
+                        }
+                    }
+                }
+                return sel;
+            };
+
 
 
         });
@@ -107,7 +165,9 @@ myApp.controller('AppCtrl', function($scope, $http){
 
     $scope.deselect = function(){
         $scope.contact= "";
-    }
+    };
+
+
 
 });
 
