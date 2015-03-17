@@ -47,105 +47,68 @@
 
   <div class="row main_content">
     <div class="row">
-      <div class="col-md-4 dl_list_container" ><!-- download list -->
+      <div class="col-md-6 dl_list_container" ><!-- download list -->
 
-        <table class="table  top_dl" align="left" ><!-- dl list inner wrapper -->
-          <th>Top Downloads</th>
-
-          <tr>
+        <table width="100%" class="table  top_dl" align="left" ><!-- dl list inner wrapper -->
+          <tbody>
+          <th  style="padding-left:20px;"><h2>Recent Uploads</h2></th>
+          <th><a ui-sref="sounds">All</a></th>
+          <tr ng-repeat="sound in sounds | orderBy: _id | limitTo: 3">
             <td>
-              <table cellpadding="0" cellspacing="0" border="0"><!-- audio track -->
+              <table align="center" widgh="600" class="sound-table" cellpadding="0" cellspacing="0" border="0"><!-- audio track -->
+
                 <tr>
                   <td>
                     <table width="100%">
                       <tr>
-                        <td>
-                          <table align="left">
+                        <td width="200">
+                          <table align="center">
                             <tr>
-                              <td style="font-size:12px;">
-                                Urban Bling
+                              <td style="font-size:14px;">
+                                <b><h4>{{sound.name}}</h4></b>
                               </td>
                             </tr>
                           </table>
                         </td>
+                        <td width="150">
+                          <table align="left">
+                            <tr>
+                              <td style="font-size:12px;">
+                                <b>Category:</b> {{sound.category}}
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td>
+                          <table align="left">
+                            <tr>
+                              <td style="font-size:12px;">
+                                <b>Genre:</b> {{sound.genre}}
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+
 
                         <td>
                           <table align="right">
                             <tr>
                               <td style="font-size:12px;">
-                                120 bpm
+                                {{sound.bpm}}  bpm
                               </td>
                             </tr>
                           </table>
-                        </td
+                        </td>
                       </tr>
                     </table>
                   </td>
                 </tr>
                 <tr>
-                  <td width="500">
-                    <audio width="500" controls="" loop  name="media">
-                      <source width="500" src="http://samplecutz.com/wp-content/uploads/2015/03/urban_bling_120bpm.mp3" type="audio/mpeg">
+                  <td>
+                    <audio width="500" ng-src="{{sound.audio_link}}" controls="" loop name="media" type="audio/mpeg">
                     </audio>
-                  </td>
-
-                  <td>
-                    <table>
-                      <tr>
-                        <td class="download_home" style=" font-size: 10px; padding-left:12px;">
-                          Download
-                        </td>
-                      </tr>
-                      <tr>
-
-                        <td >
-
-                          <img class="download_home" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/02/download_arrow_icon.png" alt="download" width="30" height="auto"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table><!-- audio track -->
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <table cellpadding="0" cellspacing="0" border="0"><!-- audio track -->
-                <tr>
-                  <td>
-                    <table width="100%">
-                      <tr>
-                        <td>
-                          <table align="left">
-                            <tr>
-                              <td style="font-size:12px;">
-                                Cinematic String Loop
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-
-                        <td>
-                          <table align="right">
-                            <tr>
-                              <td style="font-size:12px;">
-                                60 bpm
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <audio controls style="width:400px; src="http://samplecutz.com/wp-content/uploads/2015/03/urban_bling_120bpm.mp3" type="audio/mpeg" >
 
 
-                    Your browser does not support the audio tag.
-                    </audio>
                   </td>
 
                   <td>
@@ -158,7 +121,8 @@
                       <tr>
 
                         <td>
-                          <img class="download_home" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/02/download_arrow_icon.png" alt="download" width="30" height="auto"/>
+                          <a href="{{sound.audio_link}}" download="{{sound.file_name}}">
+                            <img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/02/download_arrow_icon.png" alt="download" width="30" height="auto"/></a>
                         </td>
                       </tr>
                     </table>
@@ -167,177 +131,14 @@
               </table><!-- audio track -->
             </td>
           </tr>
-          <tr>
-            <td>
-              <table cellpadding="0" cellspacing="0" border="0"><!-- audio track -->
-                <tr>
-                  <td>
-                    <table width="100%">
-                      <tr>
-                        <td>
-                          <table align="left">
-                            <tr>
-                              <td style="font-size:12px;">
-                                Gangsta Drum Loop
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
 
-                        <td>
-                          <table align="right">
-                            <tr>
-                              <td style="font-size:12px;">
-                                78 bpm
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <audio controls style="width:400px;>
-                                        <source src="horse.mp3" type="audio/mp3">
-                    Your browser does not support the audio tag.
-                    </audio>
-                  </td>
-
-                  <td>
-                    <table>
-                      <tr>
-                        <td style=" font-size: 10px; padding-left:12px;">
-                          Download
-                        </td>
-                      </tr>
-                      <tr>
-
-                        <td>
-                          <img class="download_home" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/02/download_arrow_icon.png" alt="download" width="30" height="auto"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table><!-- audio track -->
-            </td>
+          </td>
           </tr>
-          <tr>
-            <td>
-              <table cellpadding="0" cellspacing="0" border="0"><!-- audio track -->
-                <tr>
-                  <td>
-                    <table width="100%">
-                      <tr>
-                        <td>
-                          <table align="left">
-                            <tr>
-                              <td style="font-size:12px;">
-                                Techno Synth Loop
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-
-                        <td>
-                          <table align="right">
-                            <tr>
-                              <td style="font-size:12px;">
-                                130 bpm
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <audio controls style="width:400px;>
-                                    <source src="horse.mp3" type="audio/mp3">
-                    Your browser does not support the audio tag.
-                    </audio>
-                  </td>
-
-                  <td>
-                    <table>
-                      <tr>
-                        <td style=" font-size: 10px; padding-left:12px;">
-                          Download
-                        </td>
-                      </tr>
-                      <tr>
-
-                        <td>
-                          <img class="download_home" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/02/download_arrow_icon.png" alt="download" width="30" height="auto"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table><!-- audio track -->
-              <table cellpadding="0" cellspacing="0" border="0"><!-- audio track -->
-                <tr>
-                  <td>
-                    <table width="100%">
-                      <tr>
-                        <td>
-                          <table align="left">
-                            <tr>
-                              <td style="font-size:12px;">
-                                Jungle Boogie Loop
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-
-                        <td>
-                          <table align="right">
-                            <tr>
-                              <td style="font-size:12px;">
-                                120 bpm
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <audio controls style="width:400px;>
-                                    <source src="horse.mp3" type="audio/mp3">
-                    Your browser does not support the audio tag.
-                    </audio>
-                  </td>
-
-                  <td>
-                    <table>
-                      <tr>
-                        <td style=" font-size: 10px; padding-left:12px;">
-                          Download
-                        </td>
-                      </tr>
-                      <tr>
-
-                        <td>
-                          <img class="download_home" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/02/download_arrow_icon.png" alt="download" width="30" height="auto"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table><!-- audio track -->
-            </td>
-          </tr>
+          </tbody>
         </table><!-- dl list inner wrapper -->
       </div><!-- download list end -->
 
-      <div class="col-md-6 signUp_continer">
+      <div class="col-md-4 signUp_continer">
         <table align="right" width="250" cellpadding="0" cellspacing="0" border="0"><!-- login wrapper -->
           <tr>
             <td>
