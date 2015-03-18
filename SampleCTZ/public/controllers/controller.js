@@ -87,36 +87,6 @@ myApp.controller('AppCtrl', function($scope, $http){
             ];
 
 
-            //$scope.showAll = true;
-            //$scope.checkChange = function() {
-            //    for(t in $scope.genres){
-            //        if($scope.genres[t].on){
-            //            $scope.showAll = false;
-            //            return;
-            //        }
-            //    }
-            //    $scope.showAll = true;
-            //};
-            //
-            //$scope.myFunc = function(a) {
-            //    if($scope.showAll) { return true; }
-            //
-            //    var sel = false;
-            //
-            //    for(genre in $scope.genres){
-            //        var t = $scope.genres[genre];
-            //        console.log(t);
-            //        if(t.on){
-            //            if(a.genre.indexOf(t.name) == -1){
-            //                return false;
-            //            }else{
-            //                sel = true;
-            //            }
-            //        }
-            //    }
-            //    return sel;
-            //};
-
             $scope.filter = {};
 
             $scope.getOptionsFor = function (propName) {
@@ -171,6 +141,14 @@ myApp.controller('AppCtrl', function($scope, $http){
 
 
         });
+
+        $scope.reset = function() {
+            $scope.user = angular.copy($scope.master);
+        };
+
+        $scope.reset();
+
+
         $scope.orderProp = '_id';
     };
     refresh();
