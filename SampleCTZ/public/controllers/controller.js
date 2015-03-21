@@ -37,8 +37,8 @@ var myApp = angular.module('myApp',[
                templateUrl:'partials/learning.html',
                controller: 'AppCtrl'
            })
-           .state('sounds', {
-               url:'/sounds',
+           .state('audio', {
+               url:'/audio',
                templateUrl:'partials/sounds.html',
                controller: 'AppCtrl'
            })
