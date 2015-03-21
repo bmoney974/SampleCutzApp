@@ -19,53 +19,61 @@
 
     <div class="row"><!-- sounds wrapper -->
         <div id="sidebar" class="col-md-4 col-sm-4"><!-- side bar -->
-            <div class="sidebar affix" data-spy="affix"  data-offset-top="300" >
-            <form class="sidebar-form">
-                <h3 style="margin-bottom: 30px;">Filter Audio</h3>
-                <div class="form-group">
-                    <label>Search</label>
-                    <input type="text" data-ng-model="searchSounds" />
-                </div>
-                <div class="form-group">
-                    <label>Category</label>
-                    <select ng-model="showCategory">
-                        <option value="" selected>All</option>
-                        <option ng-repeat ="category in categories" value="{{category.name}}">{{category.name}}</option>
-
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Sort By</label>
-                    <select ng-model="orderProp">
-                        <option value="_id">Recent</option>
-                        <option value="name">Name</option>
-                        <option value="bpm">BPM Lowest</option>
-                        <option value="-bpm">BPM Highest</option>
-                    </select>
-                </div>
-                <fieldset>
-                    <div ng-repeat="prop in sounds[0] | keys | filter:'genre' " ng-init="filter[prop]={}">
-                    <legend>Genres</legend>
-                    <li style="list-style: none;" class="no-decoration" class="quarter" ng-repeat="opt in getOptionsFor(prop) | filter:'!sound'">
-                        <label>
-                            <input type="checkbox" type="checkbox" ng-model="filter[prop][opt]" />&nbsp;{{opt}}</label>
-
-                    </li>
+            <div class="sidebar" data-spy="affix"  data-offset-top="300" >
+                <form class="sidebar-form">
+                    <h3 style="margin-bottom: 30px;">Filter Audio</h3>
+                    <div class="form-group">
+                        <label>Search</label>
+                        <input type="text" data-ng-model="searchSounds" />
                     </div>
-                </fieldset>
-                <br>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select ng-model="showCategory">
+                            <option value="" selected>All</option>
+                            <option ng-repeat ="category in categories" value="{{category.name}}">{{category.name}}</option>
 
-                <div>
-                    <img class="img-responsive sidebar-ad" src="http://samplecutz.com/wp-content/uploads/2015/03/att-ad.png" />
-                </div>
-            </form>
-</div>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Sort By</label>
+                        <select ng-model="orderProp">
+                            <option value="_id">Recent</option>
+                            <option value="name">Name</option>
+                            <option value="bpm">BPM Lowest</option>
+                            <option value="-bpm">BPM Highest</option>
+                        </select>
+                    </div>
+                    <fieldset>
+                        <div ng-repeat="prop in sounds[0] | keys | filter:'genre' " ng-init="filter[prop]={}">
+                            <legend>Genres</legend>
+                            <li style="list-style: none;" class="no-decoration" class="quarter" ng-repeat="opt in getOptionsFor(prop) | filter:'!sound'">
+                                <label>
+                                    <input type="checkbox" type="checkbox" ng-model="filter[prop][opt]" />&nbsp;{{opt}}</label>
+
+                            </li>
+                        </div>
+                    </fieldset>
+                    <br>
+
+                    <div>
+                        <img class="img-responsive sidebar-ad" src="http://samplecutz.com/wp-content/uploads/2015/03/att-ad.png" />
+                    </div>
+                </form>
+            </div>
         </div><!-- side bar end -->
 
         <div class="col-md-8 col-sm-8 sounds-side" style="margin-bottom: 30px;"><!-- sounds -->
+
+            <!-- TEST DIV -->
+            <!--<div>-->
+                <!--<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>-->
+                <!--<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>-->
+            <!--</div>-->
+            <!-- /TEST DIV -->
+
             <table class="table table-bordered dl_table" width="100%" align="center"  ><!-- dl list inner wrapper -->
                 <tbody>
-               <th class="dl_heading" style="padding-left:100px;"><h2>Download Audio</h2></th>
+                <th class="dl_heading" style="padding-left:100px;"><h2>Download Audio</h2></th>
                 <tr ng-repeat="sound in filtered=(sounds | filter:filterByProperties | orderBy: orderProp | filter:showCategory | filter:searchSounds  )">
                     <td>
                         <table align="center" widgh="100%" class="  sound-table" cellpadding="0" cellspacing="0" border="0"><!-- audio track -->
@@ -87,7 +95,7 @@
                                                 <table align="left">
                                                     <tr>
                                                         <td style="font-size:12px;">
-                                                        <b>Category:</b> {{sound.category}}
+                                                            <b>Category:</b> {{sound.category}}
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -135,7 +143,7 @@
 
                                             <td>
                                                 <a href="{{sound.audio_link}}" download="{{sound.file_name}}">
-                                                <img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/02/download_arrow_icon.png" alt="download" width="30" height="auto"/></a>
+                                                    <img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/02/download_arrow_icon.png" alt="download" width="30" height="auto"/></a>
                                             </td>
                                         </tr>
                                     </table>

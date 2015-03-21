@@ -13,14 +13,18 @@ body {
 
 }
 
-.logo, .advert
-{
+.logo, .advert {
     margin-top: -20px;
-    padding-top:30px;
-
+    padding-top: 30px;
+    display: flex;
+    -moz-display: flex;
+    -webkit-display: flex;
+    justify-content: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
 }
 .advert img {
-    margin-left: 45px;
+    /*margin-left: 45px;*/
 }
 .nav_bar {
     margin-left: 60px;
@@ -49,7 +53,7 @@ body {
     margin-bottom: 30px;
 }
 .featured_tut {
-margin-bottom: 30px;
+    margin-bottom: 30px;
 
 }
 
@@ -64,7 +68,7 @@ margin-bottom: 30px;
 }
 
 .nav_row {
-   background: url("http://samplecutz.com/wp-content/uploads/2015/03/navbg-1.jpg");
+    background: url("http://samplecutz.com/wp-content/uploads/2015/03/navbg-1.jpg");
 
 }
 
@@ -124,7 +128,7 @@ margin-bottom: 30px;
 }
 
 .form_wrapper {
-   border: 1px solid #65968F;
+    border: 1px solid #65968F;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     -o-border-radius: 6px;
@@ -148,20 +152,17 @@ margin-bottom: 30px;
 
 
 /*.sidebar {*/
-    /*margin-top:200px;*/
+/*margin-top:200px;*/
 /*}*/
 
 .sidebar {
     margin-top: 50px;
     margin-left: 50px;
-    /*width: 25%;*/
     width:300px;
 }
 
 .sidebar.affix {
-
-    margin-top:-300px;
-    /*width: 25%;*/
+    top: 16px;
     width:300px;
 }
 
@@ -186,7 +187,7 @@ margin-bottom: 30px;
 }
 
 .breadcrumb {
-background: rgba(37,42,46,.1);
+    background: rgba(37,42,46,.1);
 
 }
 
@@ -240,7 +241,7 @@ background: rgba(37,42,46,.1);
 .slider-headline {
     text-shadow: 6px 2px #000000;
     background-color:#001dd5;
-   text-align:center;
+    text-align:center;
     width:65%;
     display:inline-flex;
     -moz-display:inline-flex;
@@ -265,7 +266,7 @@ background: rgba(37,42,46,.1);
     background-color: #000000;
     text-align: center;
     width:65%;
-display: inline-flex;
+    display: inline-flex;
     -moz-display:inline-flex;
     -webkit-display:inline-flex;
     padding:5px;
@@ -355,19 +356,19 @@ display: inline-flex;
 }
 
 .testimony-wrapper {
- margin-top:30px;
+    margin-top:30px;
 }
 
 /*body{*/
-    /*background-color: #525252;*/
+/*background-color: #525252;*/
 /*}*/
 /*.centered-form{*/
-    /*margin-top: 60px;*/
+/*margin-top: 60px;*/
 /*}*/
 
 /*.centered-form .panel{*/
-    /*background: rgba(255, 255, 255, 0.8);*/
-    /*box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;*/
+/*background: rgba(255, 255, 255, 0.8);*/
+/*box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;*/
 /*}*/
 
 .join-btn {
@@ -377,4 +378,12 @@ display: inline-flex;
 
 .login_wrapper {
     margin-right:20px;
+}
+
+.logo_text {
+    padding-left:20px;
+}
+.logo_subhead {
+    margin-top:-10px;
+    padding-left: 20px;
 }
