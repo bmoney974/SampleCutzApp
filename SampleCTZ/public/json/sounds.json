@@ -51,3 +51,78 @@ bpm: 80,
 audio_link: 'http://samplecutz.com/wp-content/uploads/2015/03/coo_wah_gtr_80bpm.mp3',
 file_name: 'coo_wah_gtr_80bpm.mp3'
 }
+
+
+// batch 2 ===============================
+
+{
+name: 'hanging_clothes_line_85bpm',
+category: 'Loop',
+genre: 'Alternative',
+bpm: 85,
+audio_link: 'http://samplecutz.com/wp-content/uploads/2015/03/hanging_clothes_line_85bpm.mp3',
+file_name: 'hanging_clothes_line_85bpm.mp3'
+}
+
+{
+name: 'heavy_rocker_gtr_120bpm',
+category: 'Loop',
+genre: 'Rock',
+bpm: 120,
+audio_link: 'http://samplecutz.com/wp-content/uploads/2015/03/heavy_rocker_gtr_120bpm.mp3',
+file_name: 'heavy_rocker_gtr_120bpm.mp3'
+}
+
+{
+name: 'heavy_rocker_full_120bpm',
+category: 'Loop',
+genre: 'Rock',
+bpm: 120,
+audio_link: 'http://samplecutz.com/wp-content/uploads/2015/03/heavy_rocker_full_120bpm.mp3',
+file_name: 'heavy_rocker_full_120bpm.mp3'
+}
+
+{
+name: 'waiting_for_you_93bpm',
+category: 'Loop',
+genre: 'Pop',
+bpm: 93,
+audio_link: 'http://samplecutz.com/wp-content/uploads/2015/03/waiting_for_you_93bpm.mp3',
+file_name: 'waiting_for_you_93bpm.mp3'
+}
+
+{
+name: 'clean_cool_gtr_94bpm',
+category: 'Loop',
+genre: 'Funk',
+bpm: 94,
+audio_link: 'http://samplecutz.com/wp-content/uploads/2015/03/clean_cool_gtr_94bpm.mp3',
+file_name: 'clean_cool_gtr_94bpm.mp3'
+}
+
+{
+name: 'fantasy_tale_112bpm',
+category: 'Loop',
+genre: 'Electronic',
+bpm: 112,
+audio_link: 'http://samplecutz.com/wp-content/uploads/2015/03/fantasy_tale_112bpm.mp3',
+file_name: 'fantasy_tale_112bpm.mp3'
+}
+
+{
+name: 'dream_chase_112bpm',
+category: 'Loop',
+genre: 'Electronic',
+bpm: 112,
+audio_link: 'http://samplecutz.com/wp-content/uploads/2015/03/dream_chase_112bpm.mp3',
+file_name: 'dream_chase_112bpm.mp3'
+}
+
+{
+name: 'night_time_cruse_95_bpm',
+category: 'Loop',
+genre: 'Pop',
+bpm: 95,
+audio_link: 'http://samplecutz.com/wp-content/uploads/2015/03/night_time_cruse_95_bpm.mp3',
+file_name: 'night_time_cruse_95_bpm.mp3'
+}

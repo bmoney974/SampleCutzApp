@@ -138,3 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
         dropTarget.addEventListener(event, handlers[event]);
     });
 });
+
+var dl_window = function (){
+    window.open("#/")
+}

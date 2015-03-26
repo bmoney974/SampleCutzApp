@@ -388,3 +388,16 @@ body {
 .info_row {
     margin-top:10px;
 }
+
+.audio_track {
+
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+.table-bordered {
+    border-bottom-width: thick;
+}
