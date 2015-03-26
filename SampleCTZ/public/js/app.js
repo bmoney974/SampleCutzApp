@@ -139,6 +139,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-var dl_window = function (){
-    window.open("#/")
-}

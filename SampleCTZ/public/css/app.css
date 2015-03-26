@@ -401,3 +401,7 @@ body {
 .table-bordered {
     border-bottom-width: thick;
 }
+
+.download:hover {
+    cursor: pointer;
+}

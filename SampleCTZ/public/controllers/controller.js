@@ -51,6 +51,11 @@ var myApp = angular.module('myApp',[
                url:'/video',
                templateUrl:'partials/video.html',
                controller: 'AppCtrl'
+           })
+           .state('dl', {
+               url:'/dl',
+               templateUrl:'partials/dl.html',
+               controller: 'AppCtrl'
            });
 
 
@@ -187,7 +192,13 @@ myApp.controller('AppCtrl', function($scope, $http){
         $scope.contact= "";
     };
 
+    $scope.dl_window = function (){
+        var link = $scope.sound.audio_link ;
+        var name = $scope.sound.file_name;
 
+        window.open("http://localhost:3000/#/dl","mywin", "width=300, height=300");
+
+    };
 
 });
 
