@@ -19,6 +19,8 @@ app.get('/sounds', function(req, res) {
         res.json(docs);
     });
 
+
+
 });
 
 //send data to the database
@@ -58,6 +60,8 @@ app.put('/sounds/:id', function(req, res){
 
     });
 });
+
+
 app.listen(3000);
 console.log("Server running on port 3000");
 

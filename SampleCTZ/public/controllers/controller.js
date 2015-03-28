@@ -200,6 +200,11 @@ myApp.controller('AppCtrl', function($scope, $http){
 
     };
 
+    $http.get('json/videos.json').success(function(data){
+        $scope.videos = data;
+
+    });
+
 });
 
 myApp.filter('keys', function () {
@@ -209,3 +214,4 @@ myApp.filter('keys', function () {
         });
     };
 });
+
