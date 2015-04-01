@@ -1,5 +1,6 @@
 var myApp = angular.module('myApp',[
-    'ui.router'
+    'ui.router',
+    'wavesurfer.angular'
     //'ngResource',
     //'myApp.filters'
 ])
@@ -77,11 +78,30 @@ var myApp = angular.module('myApp',[
 
 myApp.controller('AppCtrl', function($scope, $http){
     console.log("Hello World from controller");
+
+    $scope.options = {
+        waveColor      : '#c5c1be',
+        progressColor  : '#2A9FD6',
+        normalize      : true,
+        hideScrollbar  : true,
+        skipLength     : 15,
+        height         : 53,
+        cursorColor    : '#2A9FD6'
+    };
+
     var refresh = function(){
+
+        $http.get('/videos').success(function(response){
+            $scope.videos= response;
+
+        });
+
         $http.get('/sounds').success(function(response){
             console.log("I got the data i requested")
-            $scope.sounds= response
+            $scope.sounds= response;
             $scope.sound ="";
+
+
 
 
 

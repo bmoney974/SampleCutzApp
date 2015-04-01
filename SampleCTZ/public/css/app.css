@@ -330,6 +330,7 @@ body {
 
 .login_wrapper {
     margin-right:20px;
+
 }
 
 .logo_text {
@@ -404,4 +405,8 @@ body {
 
 .download:hover {
     cursor: pointer;
+}
+
+.audio-volume {
+    display:none;
 }

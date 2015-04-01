@@ -98,8 +98,10 @@
                                                 <table align="left"><!-- audio player -->
                                                     <tr>
                                                         <td style="padding-left: 20px;">
-                                                            <audio width="100%" ng-src="{{sound.audio_link}}" controls="" loop name="media" type="audio/mpeg">
-                                                            </audio>
+                                                            <!--<audio width="100%" ng-src="{{sound.audio_link}}" controls="" loop name="media" type="audio/mpeg">-->
+                                                            <!--</audio>-->
+
+                                                            <wavesurfer-angular url="sound.audio_link" options="options"></wavesurfer-angular>
                                                         </td>
                                                     </tr>
                                                 </table><!-- audio player end -->

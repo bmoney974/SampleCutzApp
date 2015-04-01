@@ -1,7 +1,10 @@
 var express = require('express');
 var app = express();
-var mongojs = require('mongojs');
-var db = mongojs(process.env.MONGO_URL || 'sounds', ['sounds']);
+var mongoose = require('mongoose');
+var Sound = require('./models/Sound.js');
+
+mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost/sounds');
+
 var bodyParser = require('body-parser');
 
 
@@ -10,18 +13,27 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 
 
-// get data from database
-app.get('/sounds', function(req, res) {
-    console.log("I received a get request");
-
-    db.sounds.find(function(err, docs){
+app.get('/videos', function(req, res){
+    console.log('I received a request for videos');
+    db.videos.find(function(err, docs){
         console.log(docs);
         res.json(docs);
     });
+});
 
+// get data from database
+app.get('/sounds', function(req, res) {
+    //console.log("I received a get request");
 
+    Sound.find(function(err, docs){
+        //console.log(docs);
+        res.json(docs);
+    });
 
 });
+
+
+
 
 //send data to the database
 app.post('/sounds', function(req, res){
