@@ -64,7 +64,12 @@ var myApp = angular.module('myApp',[
                url:'/video_page/:id',
                templateUrl:'partials/single_video.html',
                controller: 'SingleVideoCtrl'
-           });
+           })
+            .state('login', {
+                url:'/login',
+                templateUrl:'partials/login.html',
+                controller: 'LoginCtrl'
+            });
 
 
 
@@ -84,10 +89,19 @@ var myApp = angular.module('myApp',[
 
 
 
-myApp.controller('AppCtrl', function($scope, $http){
+myApp.controller('AppCtrl', function($scope, $http, $state){
     console.log("Hello World from controller");
 
+$scope.username = localStorage.getItem('username');
 
+    $scope.promptLogin = function () {
+        var result = confirm('Please log in to download');
+        if (result){
+            $state.go('login');
+        }
+    };
+
+    $scope.isloggedin = !!$scope.username;
     //wave surfer options
     $scope.options = {
         waveColor      : '#c5c1be',

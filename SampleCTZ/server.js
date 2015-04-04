@@ -4,7 +4,15 @@ var mongoose = require('mongoose');
 var Sound = require('./models/Sound.js');
 var User = require('./models/User.js');
 var Video = require('./models/Video.js');
+var passport = require('passport'),
+    LocalStrategy = require('passport-local').Strategy;
+
+passport.use(User.createStrategy());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost/sounds');
+
 
 var bodyParser = require('body-parser');
 
@@ -12,7 +20,7 @@ var bodyParser = require('body-parser');
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
-
+app.use(passport.initialize());
 
 app.get('/video/:id', function(req, res, next){
     console.log('I received a request for videos');
@@ -61,9 +69,19 @@ app.get('/sounds', function(req, res) {
 //register user
 app.post('/users', function(req, res){
     console.log(req.body);
-    var user = new User(req.body).save(function(){
-        res.send(200);
+    var user = new User(req.body);
+
+    user.setPassword(req.body.password, function () {
+        user.save(function(){
+            res.sendStatus(200);
+        });
     });
+
+
+});
+
+app.post('/login', passport.authenticate('local'), function(req, res){
+    res.send(200);
 });
 
 
