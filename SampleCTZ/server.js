@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
 var Sound = require('./models/Sound.js');
-
+var User = require('./models/User.js');
 mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost/sounds');
 
 var bodyParser = require('body-parser');
@@ -16,6 +16,16 @@ app.use(bodyParser.json());
 app.get('/videos', function(req, res){
     console.log('I received a request for videos');
     db.videos.find(function(err, docs){
+        console.log(docs);
+        res.json(docs);
+    });
+});
+
+
+
+app.get('/users', function(req, res){
+    console.log('I received a request for the users');
+    User.find(function(err, docs){
         console.log(docs);
         res.json(docs);
     });
@@ -35,13 +45,23 @@ app.get('/sounds', function(req, res) {
 
 
 
-//send data to the database
-app.post('/sounds', function(req, res){
+//register user
+app.post('/users', function(req, res){
     console.log(req.body);
-    db.contactlist.insert(req.body, function(err, doc){
+    User.insert(req.body, function(err, doc){
         res.json(doc);
     })
 });
+
+
+//app.post('/users',function(req,res){
+//    var user_name=req.body.username;
+//    var email=req.body.email;
+//    var password=req.body.password;
+//    console.log("User name = "+user_name+", password is " +password + "email is " + email);
+//    res.end("yes");
+//
+//});
 
 // delete data from database
 

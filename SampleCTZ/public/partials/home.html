@@ -1,31 +1,31 @@
 
 
-<div class="row main_wrapper ">
+<div class="row main_wrapper " >
 
 
 
   <!--=====================================  Slider Start =========================================== -->
   <div id="carousel-example-generic" class="carousel slide main_hero" data-ride="carousel">
     <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <!--<ol class="carousel-indicators">-->
+      <!--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>-->
+      <!--<li data-target="#carousel-example-generic" data-slide-to="1"></li>-->
 
-    </ol>
+    <!--</ol>-->
 
     <!-- Wrapper for slides -->
-    <div class="container">
+    <div class="container-fluid" style="max-width: 90%;">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 col-sm-12">
           <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
+            <!--<ol class="carousel-indicators">-->
+              <!--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>-->
+              <!--<li data-target="#carousel-example-generic" data-slide-to="1"></li>-->
+              <!--<li data-target="#carousel-example-generic" data-slide-to="2"></li>-->
+            <!--</ol>-->
             <div class="carousel-inner">
               <div class="item active">
-                <img src="http://samplecutz.com/wp-content/uploads/2015/03/scz_hero2.jpg" alt="First slide" width="100%" height="auto">
+                <img class="img-responsive"  src="http://samplecutz.com/wp-content/uploads/2015/03/scz_hero2.jpg" alt="First slide" width="100%" height="auto">
                 <div class="carousel-caption">
                   <h3 style="text-shadow: 2px 2px black;">
                    Royalty Free Downloads</h3>
@@ -57,7 +57,7 @@
                         </span></a>
           </div>
           <div class="main-text hidden-xs">
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 col-sm-12 text-center">
               <span class="headline_bg">
               <h1 class="slider-headline">
                 Professional Audio for Post Production</h1>
@@ -83,21 +83,21 @@
       <!--=====================================  Testimony  Start =========================================== -->
 
       <div class="row info_row" >
-        <div class="col-md-4 home_info_box">
+        <div class="col-md-4 col-sm-4 home_info_box">
           <h3 class="home_subhead">Professionally produced audio</h3>
-          <img class="" src="http://samplecutz.com/wp-content/uploads/2015/03/Session-guitarist-in-studio-e1399826812979.jpg" width="350" height="auto"/>
+          <img class="img-responsive" src="http://samplecutz.com/wp-content/uploads/2015/03/Session-guitarist-in-studio-e1399826812979.jpg" width="320" height="auto"/>
 <br />
         All our audio is professionally produced in state of the art recording studios by skilled musicians, composers, and engineers           to ensure that all of your projects have the highest quality audio.
         </div>
-        <div class="col-md-4 home_info_box">
+        <div class="col-md-4 col-sm-4 home_info_box">
           <h3 class="home_subhead">Royalty Free downloads</h3>
-          <img class="" src="http://samplecutz.com/wp-content/uploads/2015/03/band+contract+463.jpg" width="350" height="auto"/>
+          <img class="img-responsive" src="http://samplecutz.com/wp-content/uploads/2015/03/band+contract+463.jpg" width="320" height="auto"/>
           <br />
   Every audio file is produced on a work for hire basis, giving you access to royalty free downloads that you can use however you want whenever you want with out having to worry about huge licensing fees or long contracts.
           </div>
-        <div class="col-md-4 home_info_box">
+        <div class="col-md-4 col-sm-4 home_info_box">
           <h3 class="home_subhead">Simple and easy membership</h3>
-          <img class="" src="http://samplecutz.com/wp-content/uploads/2015/03/suite_498x280.jpg" width="350" height="auto"/>
+          <img class="img-responsive" src="http://samplecutz.com/wp-content/uploads/2015/03/suite_498x280.jpg" width="320" height="auto"/>
           <br />
           Getting those perfect tracks for your project has never been easier with our membership plan. Just find the audio you want, download it, and use it how ever you want to. No contracts no licensing fees just simple and hassle free.
         </div>
@@ -108,165 +108,74 @@
       <!--=====================================  Recent Uploads  =========================================== -->
       <div class="row main_content">
     <div class="row">
-      <div class="col-md-6 dl_list_container" style="margin-top: 30px;" ><!-- download list -->
+      <div class="col-md-6 col-sm-6 dl_list_container" style="margin-top: 30px;" ><!-- download list -->
+        <div class="recent_heading">
+        <span class="recent"><h2 style="">Recent Uploads</h2></span>
+          <span class="view_all"><a ui-sref="audio"><h4> View All</h4></a></span>
+            </div>
+          <div class=" row player_wrapper" ng-repeat="sound in filtered=(sounds | filter:filterByProperties | orderBy: _id | limitTo:2 )">
+              <div class="col-xs-12 player">
+                  <span class="sound_name"><b><h4>{{sound.name}}</h4></b></span>
+                  <wavesurfer-angular url="sound.audio_link" options="options"></wavesurfer-angular>
+                  <div class="sound_info">
+                      <span class="info"><b>Category:</b> {{sound.category}}</span>
+                      <span class="info"><b>Genre:</b> {{sound.genre}}</span>
+                      <span class="info bpm"><b>{{sound.bpm}}&nbsp;bpm</b></span>
+                      <span class="info"><a ng-href="{{sound.audio_link}}" download="{{sound.file_name}}" ng-click="dl_window()"><img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/03/55d62a1640ac50dc8544cb4524418f1c.png" alt="download" width="30" height="auto"/><span class="glyphicon glyphicon-download-alt"></span></a></span>
+                  </div>
+              </div>
+              <hr/>
+          </div>
 
-        <h2 style="margin-left:20px;">Recent Uploads</h2>
-        <table class="table table-bordered dl_table" width="100%" align="center"><!-- list wrapper -->
-
-          <tr style="border-bottom:2px solid #807F83;" ng-repeat="sound in filtered=(sounds | filter:filterByProperties | orderBy: _id | limitTo:3 )">
-            <td>
-              <table><!-- list item wrapper  -->
-                <tr >
-                  <td>
-                    <table width="100%" align="left"><!-- sound name -->
-                      <tr>
-                        <td style="text-align: left; padding-left: 20px;"">
-                        <b><h4>{{sound.name}}</h4></b>
-                        </td>
-                      </tr>
-                    </table><!-- sound name end  -->
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <table><!-- audio player wrapper -->
-                      <tr>
-                        <td>
-                          <table align="left"><!-- audio player -->
-                            <tr>
-                              <td style="padding-left: 20px;">
-                                <!--<audio width="100%" ng-src="{{sound.audio_link}}" controls="" loop name="media" type="audio/mpeg">-->
-                                <!--</audio>-->
-                                  <wavesurfer-angular url="sound.audio_link" options="options"></wavesurfer-angular>
-                              </td>
-                            </tr>
-                          </table><!-- audio player end -->
-                        </td>
-                        <td>
-                          <table align="right"><!-- download buttons -->
-                            <tr>
-                              <td style="padding-left: 30px;">
-                                <table><!-- mixdown -->
-                                  <tr>
-                                    <td>
-                                      <h4>Download Mixdown</h4>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <table align="center">
-                                      <tr>
-                                        <td>
-                                          <a ng-href="{{sound.audio_link}}" download="{{sound.file_name}}" ng-click="dl_window()"><img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/03/55d62a1640ac50dc8544cb4524418f1c.png" alt="download" width="30" height="auto"/><span class="glyphicon glyphicon-download-alt"></span></a>
-                                        </td>
-                                      </tr>
-                                    </table>
-                                  </tr>
-                                </table><!-- mixdown end -->
-                              </td>
-                              <td style="padding-left: 30px;">
-                                <table><!-- tracks -->
-                                  <tr>
-                                    <td>
-                                      <h4>Download Tracks</h4>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <table align="center">
-                                        <tr>
-                                          <td>
-                                            <a href="{{sound.audio_link}}" download="{{sound.file_name}}">
-                                              <img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/03/Simple_Comic_zip.png" alt="download" width="30" height="auto"/><span class="glyphicon glyphicon-download-alt"></span></a>
-                                          </td>
-                                        </tr>
-                                      </table>
-                                    </td>
-                                  </tr>
-                                </table><!-- tracks end -->
-                              </td>
-                            </tr>
-                          </table><!-- download buttons end -->
-                        </td>
-                      </tr>
-                      <tr cellpadding="0" cellspacing="0">
-                        <td>
-
-
-                  </td>
-                </tr>
-              </table><!-- audio player wrapper end -->
-            </td>
-          </tr>
-        </table><!-- list item wrapper  end -->
-        </td>
-        </tr>
-
-
-        </table><!-- list wrapper end-->
       </div><!-- download list end -->
 
       <!--=====================================  Recent uploads  End =========================================== -->
 
-      <div class="col-md-4 signUp_continer">
-        <table class="login_wrapper" align="center" width="250" cellpadding="0" cellspacing="0" border="0"><!-- login wrapper -->
-          <tr>
-            <td>
-              <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                <tr>
-                  <td>
-                    <table align="left">
-                      <tr>
-                        <td>
-                          <h3 style="text-align: center;">&nbsp;Don&rsquo;t Have an Account?</h3>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr><td height="20"></td></td></tr>
+        <!--=====================================  Register =========================================== -->
 
-
-          <tr>
-            <td>
-              <div class="form_wrapper" width="100%">
-              <table> <!-- sign up form -->
-                <tr>
-                  <td>
-                    <form class="form" style="padding:20px" width="100%">
-                      <p>Username</p>
-                      <input type="text" size="40"><br /><br />
-                      <p>Email</p>
-                      <input type="text" size="40"><br /><br />
-                      <p>Password</p>
-                      <input type="text" size="40"><br /><br />
-                      <p>Confrim Password</p>
-                      <input type="text" size="40"><br /><br />
-                      <input class="btn btn-normal join-btn" type="submit" value="Join">
+      <div class="col-md-4 col-md-offset-1" >
+          <div class="panel panel-default signup_form_home">
+              <div class="panel-heading">
+                  <h3 class="panel-title">Don't Have an Account?</h3><small>Join Free!</small>
+              </div>
+              <div class="panel-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">User Name</label>
+                            <input type="text" class="form-control" ng-model="user.username" id="exampleInputEmail1" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" ng-model="user.email" id="exampleInputEmail1" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Password</label>
+                            <input type="password" class="form-control" ng-model="user.password" id="exampleInputEmail1" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Confrim Password</label>
+                            <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Confirm Password">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Terms & Conditions
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-default" ng-click="registerUser()">Register</button>
                     </form>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="text-align:center; padding-bottom:20px;">
-                    <a href="">Log In</a>
-                  </td>
-                </tr>
-              </table><!-- sign up form end -->
-                </div>
-            </td>
-          </tr>
-        </table><!-- login wrapper end -->
+              </div>
+          </div>
+          </div>
       </div>
     </div>
 
   </div>
+        <!--=====================================  Register  End =========================================== -->
 <hr class="hzr" />
 
   <div class="row tuts">
 
-    <div  class="row featured_tut" >
+    <div  class="row col-md-12 col-sm-12 featured_tut" >
       <h3 style="text-align: center; margin-bottom:20px;">Featured Tutorials</h3>
       <div class="row videos">
         <div class="col-md-4">

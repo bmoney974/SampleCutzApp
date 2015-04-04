@@ -1,8 +1,9 @@
 var myApp = angular.module('myApp',[
     'ui.router',
     'wavesurfer.angular'
-    //'ngResource',
-    //'myApp.filters'
+
+
+
 ])
     .config(['$urlRouterProvider', '$stateProvider', '$sceDelegateProvider', function($urlRouterProvider, $stateProvider, $sceDelegateProvider){
        $urlRouterProvider.otherwise('/');
@@ -95,6 +96,18 @@ myApp.controller('AppCtrl', function($scope, $http){
             $scope.videos= response;
 
         });
+
+        $http.get('/users').success(function(response){
+            $scope.users= response;
+
+        });
+
+        $scope.registerUser = function(){
+            console.log($scope.user);
+            $http.post('/users', $scope.user).success(function(response){
+                console.log(response);
+            });
+        };
 
         $http.get('/sounds').success(function(response){
             console.log("I got the data i requested")

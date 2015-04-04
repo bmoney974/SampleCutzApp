@@ -1,6 +1,7 @@
 body {
-    background: url("http://www.vectorbg.net/wp-content/uploads/2011/08/metal-grill-texture.jpg");
-    min-width:1100px;
+    /*background: url("http://www.vectorbg.net/wp-content/uploads/2011/08/metal-grill-texture.jpg");*/
+margin:0;
+padding:0;
 
 }
 .main_wrapper {
@@ -68,8 +69,8 @@ body {
 }
 
 .nav_row {
-    background: url("http://samplecutz.com/wp-content/uploads/2015/03/navbg-1.jpg");
-
+    /*background: url("http://samplecutz.com/wp-content/uploads/2015/03/navbg-1.jpg");*/
+background:#000000;
 }
 
 .signUp_modal {
@@ -116,7 +117,7 @@ body {
 }
 
 .page_title, .cancel{
-    padding:20px;
+    padding-left:60px;
 }
 
 .main_hero{
@@ -159,6 +160,7 @@ body {
     margin-top: 50px;
     margin-left: 50px;
     width:300px;
+    z-index: 105;
 }
 
 .sidebar.affix {
@@ -183,7 +185,7 @@ body {
 .sounds-side {
     padding-right:60px;
     padding-top:50px;
-    max-width:800px;
+   max-width: 960px;
 }
 
 .breadcrumb {
@@ -409,4 +411,75 @@ body {
 
 .audio-volume {
     display:none;
+}
+
+.player_wrapper {
+    border-bottom: 1px solid rgba(203,201,207,0.6);
+    padding-bottom:20px;
+    padding-top:20px;
+}
+
+.sound_info {
+    display: flex;
+    flex-direction: row;
+    margin-top:10px;
+}
+
+.recent_heading {
+    display: flex;
+    flex-direction: row;
+}
+
+.info, .recent {
+    flex-grow: 1;
+}
+
+.view_all:hover {
+    cursor: pointer;
+}
+
+.bpm {
+    color:red;
+}
+
+.signup_form_home {
+    margin-top:40px;
+
+}
+
+.signup_form_home_wrapper {
+
+}
+
+.video_sidebar {
+    margin-top:50px;
+    margin-left: 40px;
+}
+
+.video_wrapper {
+    margin-top:50px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    padding-bottom:20px;
+    display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    border-bottom: 1px solid rgba(203,201,207,0.6);
+}
+
+.vid_thumb  {
+    margin-right: 40px;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -moz-flex-grow: 1;
+}
+
+.video_info {
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -moz-flex-grow: 1;
+    margin-left: 60px;
 }

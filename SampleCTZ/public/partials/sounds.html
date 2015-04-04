@@ -1,4 +1,4 @@
-<div class="row main_wrapper">
+<div class="row ">
 
 
     <div class="row page_title" >
@@ -63,140 +63,25 @@
         </div><!-- side bar end -->
 
         <div class="col-md-8 col-sm-8 sounds-side" style="margin-bottom: 30px;"><!-- sounds -->
+            <div class="row">
+                <div class="col-xs-12 dl_heading">
+                    <h2>Download Audio</h2>
+                </div>
+            </div>
+            <div class=" row player_wrapper" ng-repeat="sound in filtered=(sounds | filter:filterByProperties | orderBy: orderProp | filter:showCategory | filter:searchSounds  )">
+                <div class="col-xs-12 player">
+                    <span class="sound_name"><b><h4>{{sound.name}}</h4></b></span>
+                    <wavesurfer-angular url="sound.audio_link" options="options"></wavesurfer-angular>
+                    <div class="sound_info">
+                        <span class="info"><b>Category:</b> {{sound.category}}</span>
+                       <span class="info"><b>Genre:</b> {{sound.genre}}</span>
+                        <span class="info bpm"><b>{{sound.bpm}}&nbsp;bpm</b></span>
+                        <span class="info"><a ng-href="{{sound.audio_link}}" download="{{sound.file_name}}" ng-click="dl_window()"><img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/03/55d62a1640ac50dc8544cb4524418f1c.png" alt="download" width="30" height="auto"/><span class="glyphicon glyphicon-download-alt"></span></a></span>
+                    </div>
+                </div>
+                <hr/>
+            </div>
 
-            <table class="table table-bordered dl_table" width="100%" align="center" ><!-- list wrapper -->
-                <tr class="dl_heading" >
-                    <td>
-                        <table width="100%" align="left"><!-- heading -->
-                            <tr>
-                                <td class="" style="color:white; padding-left: 20px;" >
-                                    <h2>Download Audio</h2>
-                                </td>
-                            </tr>
-                        </table><!-- heading end-->
-                    </td>
-                </tr>
-                <tr style="border-bottom:2px solid #807F83;" ng-repeat="sound in filtered=(sounds | filter:filterByProperties | orderBy: orderProp | filter:showCategory | filter:searchSounds  )">
-                    <td>
-                        <table><!-- list item wrapper  -->
-                            <tr >
-                                <td>
-                                   <table width="100%" align="left"><!-- sound name -->
-                                       <tr>
-                                           <td style="text-align: left; padding-left: 20px;"">
-                                               <b><h4>{{sound.name}}</h4></b>
-                                           </td>
-                                       </tr>
-                                   </table><!-- sound name end  -->
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <table><!-- audio player wrapper -->
-                                        <tr>
-                                            <td>
-                                                <table align="left"><!-- audio player -->
-                                                    <tr>
-                                                        <td style="padding-left: 20px;">
-                                                            <!--<audio width="100%" ng-src="{{sound.audio_link}}" controls="" loop name="media" type="audio/mpeg">-->
-                                                            <!--</audio>-->
-
-                                                            <wavesurfer-angular url="sound.audio_link" options="options"></wavesurfer-angular>
-                                                        </td>
-                                                    </tr>
-                                                </table><!-- audio player end -->
-                                            </td>
-                                            <td>
-                                                <table align="right"><!-- download buttons -->
-                                                    <tr>
-                                                        <td style="padding-left: 30px;">
-                                                            <table><!-- mixdown -->
-                                                                <tr>
-                                                                    <td>
-                                                                        <h4>Download Mixdown</h4>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <table align="center">
-                                                                        <tr>
-                                                                            <td>
-                                                                                <a ng-href="{{sound.audio_link}}" download="{{sound.file_name}}" ng-click="dl_window()"><img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/03/55d62a1640ac50dc8544cb4524418f1c.png" alt="download" width="30" height="auto"/><span class="glyphicon glyphicon-download-alt"></span></a>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </tr>
-                                                            </table><!-- mixdown end -->
-                                                        </td>
-                                                        <td style="padding-left: 30px;">
-                                                            <table><!-- tracks -->
-                                                                <tr>
-                                                                    <td>
-                                                                        <h4>Download Tracks</h4>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <table align="center">
-                                                                            <tr>
-                                                                                <td>
-                                                                                    <a href="{{sound.audio_link}}" download="{{sound.file_name}}">
-                                                                                        <img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/03/Simple_Comic_zip.png" alt="download" width="30" height="auto"/><span class="glyphicon glyphicon-download-alt"></span></a>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </td>
-                                                                </tr>
-                                                            </table><!-- tracks end -->
-                                                        </td>
-                                                    </tr>
-                                                </table><!-- download buttons end -->
-                                            </td>
-                                        </tr>
-                                        <tr cellpadding="0" cellspacing="0">
-                                            <td>
-                                                <hr style="background-color: rgba(203,201,207,.5); height:1px;" />
-                                                <table cellpadding="0" cellspacing="0 bgcolor="#CBC9CF" width="100%" align="left" ><!--sound  info -->
-                                                    <tr>
-                                                        <td style="padding-left: 20px; padding-top:20px; padding-bottom: 20px;">
-                                                            <table align="left">
-                                                                <tr>
-                                                                    <td>
-                                                                        <b>Category:</b> {{sound.category}}
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                        <td>
-                                                            <table align="left">
-                                                                <tr>
-                                                                    <td style=" padding-top:20px; padding-bottom: 20px;">
-                                                                        <b>Genre:</b> {{sound.genre}}
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                        <td>
-                                                            <table>
-                                                                <tr>
-                                                                    <td style=" padding-top:20px; padding-bottom: 20px; text-align: right;">
-                                                                        {{sound.bpm}}&nbsp;bpm
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                </table><!--sound  info end -->
-                                            </td>
-                                        </tr>
-                                    </table><!-- audio player wrapper end -->
-                                </td>
-                            </tr>
-                        </table><!-- list item wrapper  end -->
-                    </td>
-                </tr>
-
-
-            </table><!-- list wrapper end-->
 
 
 

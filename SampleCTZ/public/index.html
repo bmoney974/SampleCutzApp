@@ -1,6 +1,7 @@
 <!DOCTYPE>
 <html ng-app="myApp">
 <head>
+
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P4F3RT"
                       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -27,20 +28,21 @@
         <title>Audio Fisher</title>
     </head>
 <body>
-<div class="container" ng-controller="AppCtrl">
+
+<div class="container-fluid" ng-controller="AppCtrl">
 
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 col-sm-12">
     <header class="header" ng-include="'partials/header.html'"></header>
     </div>
 </div>
-    <div class="row">
-        <div class="col-md-12">
+    <div class="row" >
+        <div class="col-md-12 col-sm-12">
 <div class="row page-content" ui-view></div>
 </div>
 </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 col-sm-12">
 <footer class="row" ng-include="'partials/footer.html'"></footer>
             </div>
         </div>
@@ -50,10 +52,8 @@
 
 
 
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
 
