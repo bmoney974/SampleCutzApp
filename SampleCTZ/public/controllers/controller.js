@@ -8,7 +8,8 @@ var myApp = angular.module('myApp',[
     .config(['$urlRouterProvider', '$stateProvider', '$sceDelegateProvider', function($urlRouterProvider, $stateProvider, $sceDelegateProvider){
        $urlRouterProvider.otherwise('/');
 
-       $stateProvider
+
+        $stateProvider
            .state('home', {
                url:'/',
                templateUrl: 'partials/home.html',
@@ -58,7 +59,13 @@ var myApp = angular.module('myApp',[
                url:'/dl',
                templateUrl:'partials/dl.html',
                controller: 'AppCtrl'
+           })
+            .state('video_page', {
+               url:'/video_page/:id',
+               templateUrl:'partials/single_video.html',
+               controller: 'SingleVideoCtrl'
            });
+
 
 
 
@@ -80,6 +87,8 @@ var myApp = angular.module('myApp',[
 myApp.controller('AppCtrl', function($scope, $http){
     console.log("Hello World from controller");
 
+
+    //wave surfer options
     $scope.options = {
         waveColor      : '#c5c1be',
         progressColor  : '#2A9FD6',

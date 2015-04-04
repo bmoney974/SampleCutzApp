@@ -452,7 +452,7 @@ background:#000000;
 }
 
 .video_sidebar {
-    margin-top:50px;
+    margin-top:60px;
     margin-left: 40px;
 }
 
@@ -471,7 +471,8 @@ background:#000000;
 }
 
 .vid_thumb  {
-    margin-right: 40px;
+    margin-right: 20px;
+    margin-top:10px;
     flex-grow: 1;
     -webkit-flex-grow: 1;
     -moz-flex-grow: 1;
@@ -481,5 +482,6 @@ background:#000000;
     flex-grow: 1;
     -webkit-flex-grow: 1;
     -moz-flex-grow: 1;
-    margin-left: 60px;
+    margin-left: 20px;
+    max-width:650px;
 }

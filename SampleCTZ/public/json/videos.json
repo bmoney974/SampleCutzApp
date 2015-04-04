@@ -1,4 +1,35 @@
 {
-  name:'test name',
-  description:'test description'
+"name" :"Making Better Beats",
+"category" : "Sound Design",
+"thumbnail_link" : "http://samplecutz.com/wp-content/uploads/2015/02/Screen-Shot-2015-02-22-at-5.29.04-PM.png",
+"video_link" : 'https://www.youtube.com/embed/WIiygHlnkiQ',
+"age" : 1,
+"description" : "how to make beats, dubs banger, hiphop instrumentals, old school, boom bap, new york style, beats, mpc 2000xl tutorial, how to use the mpc, sampling on the mpc, hiphop samples, beat tape, jaisu beat tape, disko dave, j depina, mpc, kanye west, johnny juliano, protect ya neck, the swarm, cream, method man, zaytoven, how to use the sp1200, how to sample, dj scratch, scratch magazinre tv, rythm roulette, mass appeal, gang starr, guru, 9th wonder, drum breaks, john coltrane, smooth tunes, sampled, records, vinyl,"
+}
+
+{
+"name" :"Logic Pro from A to Z",
+"category" : "Sound Design",
+"thumbnail_link" : "http://samplecutz.com/wp-content/uploads/2015/02/Screen-Shot-2015-02-22-at-5.25.48-PM.png",
+"video_link" : 'https://www.youtube.com/embed/hU5XhG5Ywbk',
+"age" : 2,
+"description" : "This video covers the following:
+1. Getting started in Logic X
+2. Setting Up Audio I/O
+3. Using Audio Tracks and Recording
+4. Using Software Instruments and Recording MIDI
+5. Using Apple Loops
+6. Using the Arpeggiator Plug-in
+7. Bouncing a Project"
+}
+
+{
+"name" :"Using Natvie Instruments Machine",
+"category" : "Sound Design",
+"thumbnail_link" : "http://samplecutz.com/wp-content/uploads/2015/02/Screen-Shot-2015-02-22-at-5.24.35-PM.png",
+"video_link" : 'https://www.youtube.com/embed/NMqrlV9wpLI',
+"age" : 3,
+"description" : "Native Instruments Maschine has caused quite a bit of a storm since its release - to find out why, our good fiend Owen form 2twenty2 takes you through the features and applications in this three part tutorial.
+
+The Maschine is an incredibly powerful sampler, sequencer and controller and in this first video we take a look at how to getting sounds onto the pads and what to do with them."
 }

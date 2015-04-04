@@ -3,6 +3,7 @@ var app = express();
 var mongoose = require('mongoose');
 var Sound = require('./models/Sound.js');
 var User = require('./models/User.js');
+var Video = require('./models/Video.js');
 mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost/sounds');
 
 var bodyParser = require('body-parser');
@@ -13,9 +14,21 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 
 
+app.get('/video/:id', function(req, res, next){
+    console.log('I received a request for videos');
+    var id = req.params.id;
+
+    Video.where({_id:id})
+        .findOne(function(err, doc){
+            console.log(doc);
+            res.json(doc);
+
+        });
+});
+
 app.get('/videos', function(req, res){
     console.log('I received a request for videos');
-    db.videos.find(function(err, docs){
+    Video.find(function(err, docs){
         console.log(docs);
         res.json(docs);
     });
@@ -48,9 +61,9 @@ app.get('/sounds', function(req, res) {
 //register user
 app.post('/users', function(req, res){
     console.log(req.body);
-    User.insert(req.body, function(err, doc){
-        res.json(doc);
-    })
+    var user = new User(req.body).save(function(){
+        res.send(200);
+    });
 });
 
 
@@ -74,13 +87,7 @@ app.delete('/sounds/:id', function(req, res){
 });
 
 
-app.get('/sounds/:id', function(req, res){
-   var id = req.params.id;
-    console.log(id);
-    db.contactlist.findOne({_id: mongojs.ObjectId(id)}, function(err, doc){
-       res.json(doc);
-    });
-});
+
 
 app.put('/sounds/:id', function(req, res){
    var id = req.params.id;

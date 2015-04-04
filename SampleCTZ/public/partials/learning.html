@@ -15,14 +15,25 @@
         </div>
     </div>
     <div class="col-md-8 col-sm-8">
-        <div class="video_wrapper" >
-            <div>
-                <img class="vid_thumb" src="http://samplecutz.com/wp-content/uploads/2015/02/Screen-Shot-2015-02-22-at-5.29.04-PM.png" width="125" height="100"/>
-            </div>
-            <div class="video_info">
-                <h4>Tutorial Name</h4>
-                <p>remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
+        <div class=" row video_wrapper" ng-repeat="video in videos" >
+
+
+                    <div>
+                        <a ui-sref="video_page({id:video._id})">
+                        <img class="vid_thumb" src="{{video.thumbnail_link}}" width="140" height="100"/>
+                        </a>
+                    </div>
+
+                    <div class=" video_info">
+                        <a ui-sref="video_page({id:video._id})">
+                        <h4>{{video.name}}</h4>
+                            </a>
+                        <a ui-sref="video_page({id:video._id})">
+                        <p>{{video.description}}</p>
+                            </a>
+                    </div>
+
+
 
         </div>
 
