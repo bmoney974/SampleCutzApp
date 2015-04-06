@@ -1,1 +1,38 @@
-<h3>{{video.name}}</h3>
+<div class="row main_wrapper">
+    <div class="row page_title" >
+        <div class="col-md-12">
+            <h2><a style="text-decoration: none; color:#000000;;" ui-sref="learning">Learning Center</a> / {{video.name}}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><!-- bread crumbs -->
+            <ol class="breadcrumb">
+                <li>&nbsp;</li>
+
+            </ol>
+        </div><!-- bread crumbs end -->
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="video_sidebar_title">
+                        <h3>{{video.name}}</h3>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="video_player_description">
+                        <p>{{video.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 class-sm-8">
+            <div class="embed-responsive embed-responsive-16by9 video_player">
+                <iframe class="embed-responsive-item" src="{{video.video_link}}"></iframe>
+            </div>
+        </div>
+
+    </div>
+</div>

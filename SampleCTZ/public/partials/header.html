@@ -1,93 +1,68 @@
-<div class=" row" >
-    <!--<div class="row nav-wrapper">-->
-        <!--<nav class=" row navbar nav_row">-->
-        <!--<div class=" col-md-12">-->
-            <!--<div class="row nav_row ">&lt;!&ndash; nav &ndash;&gt;-->
-                <!--<ul  class="nav nav-pills nav_bar">-->
-                    <!--<li class="nav_link " role="presentation" ><a  ui-sref="home">Home</a></li>-->
-                    <!--<li class="nav_link" role="presentation" ><a  ui-sref="account">My Account</a></li>-->
-                    <!--<li class="nav_link"  role="presentation"><a  ui-sref="audio">Audio Library</a></li>-->
-                    <!--<li class="nav_link" role="presentation"><a  ui-sref="learning">Learning Center</a></li>-->
-                    <!--<li class="nav_link" role="presentation"><a ui-sref="about">About Us</a></li>-->
 
-                <!--</ul>-->
-            <!--</div>&lt;!&ndash; nav end &ndash;&gt;-->
-<!--</div>-->
-            <!--</nav>-->
     <div class="row">
-    <nav class="navbar navbar-inverse nav_row"  >
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header" >
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a  ui-sref="home"><img class="navbar-brand" src="http://samplecutz.com/wp-content/uploads/2015/03/Audio-Fisher-Logo2.png" alt="audio fisher" width="300" height="100" /></a>
-            </div>
+    <div class="col-md-12 col-sm-12">
+        <nav class="navbar navbar-inverse navbar-fixed-top nav_row"  >
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header" >
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a  ui-sref="home"><img class="navbar-brand" src="http://samplecutz.com/wp-content/uploads/2015/03/Audio-Fisher-Logo2.png" alt="audio fisher" width="300" height="100" /></a>
+                </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a ui-sref="home">Home <span class="sr-only">(current)</span></a></li>
-                    <li><a ui-sref="account">My Account</a></li>
-                    <li><a ui-sref="audio">Audio Library</a></li>
-                    <li><a ui-sref="learning">Learing Center</a></li>
-                    <li><a ui-sref="about">About Us</a></li>
-                    <!--<li class="dropdown">-->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a ui-sref="home">Home <span class="sr-only">(current)</span></a></li>
+                        <li><a ui-sref="account({id:video._id})">My Account</a></li>
+                        <li><a ui-sref="audio">Audio Library</a></li>
+                        <li><a ui-sref="learning">Learing Center</a></li>
+                        <li><a ui-sref="about">About Us</a></li>
+                        <!--<li class="dropdown">-->
                         <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
                         <!--<ul class="dropdown-menu" role="menu">-->
-                            <!--<li><a href="#">Action</a></li>-->
-                            <!--<li><a href="#">Another action</a></li>-->
-                            <!--<li><a href="#">Something else here</a></li>-->
-                            <!--<li class="divider"></li>-->
-                            <!--<li><a href="#">Separated link</a></li>-->
-                            <!--<li class="divider"></li>-->
-                            <!--<li><a href="#">One more separated link</a></li>-->
+                        <!--<li><a href="#">Action</a></li>-->
+                        <!--<li><a href="#">Another action</a></li>-->
+                        <!--<li><a href="#">Something else here</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li><a href="#">Separated link</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li><a href="#">One more separated link</a></li>-->
                         <!--</ul>-->
-                    <!--</li>-->
-                </ul>
-                <!--<form class="navbar-form navbar-left" role="search">-->
+                        <!--</li>-->
+                    </ul>
+                    <!--<form class="navbar-form navbar-left" role="search">-->
                     <!--<div class="form-group">-->
-                        <!--<input type="text" class="form-control" placeholder="Search">-->
+                    <!--<input type="text" class="form-control" placeholder="Search">-->
                     <!--</div>-->
                     <!--<button type="submit" class="btn btn-default">Submit</button>-->
-                <!--</form>-->
-                <!--<ul class="nav navbar-nav navbar-right">-->
+                    <!--</form>-->
+                    <!--<ul class="nav navbar-nav navbar-right">-->
                     <!--<li><a href="#">Link</a></li>-->
                     <!--<li class="dropdown">-->
-                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
-                        <!--<ul class="dropdown-menu" role="menu">-->
-                            <!--<li><a href="#">Action</a></li>-->
-                            <!--<li><a href="#">Another action</a></li>-->
-                            <!--<li><a href="#">Something else here</a></li>-->
-                            <!--<li class="divider"></li>-->
-                            <!--<li><a href="#">Separated link</a></li>-->
-                        <!--</ul>-->
+                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+                    <!--<ul class="dropdown-menu" role="menu">-->
+                    <!--<li><a href="#">Action</a></li>-->
+                    <!--<li><a href="#">Another action</a></li>-->
+                    <!--<li><a href="#">Something else here</a></li>-->
+                    <!--<li class="divider"></li>-->
+                    <!--<li><a href="#">Separated link</a></li>-->
+                    <!--</ul>-->
                     <!--</li>-->
-                <!--</ul>-->
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
+                    <!--</ul>-->
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
 </div>
 
 
 
-    <div class="row logo"><!-- logo -->
-                <!--<div class="col-md-6 logo">-->
-                    <!--<a style="text-decoration: none;" class="animated tada" href="#/home" >-->
-                        <!--&lt;!&ndash;<img src="http://samplecutz.com/wp-content/uploads/2013/08/scz-logo-ex-7.png" alt="Sample Cutz" />&ndash;&gt;-->
-                   <!--<div>-->
-                    <!--<h2 class="logo_text">Audio Fisher<span style="font-size:15px;">.com</span></h2>-->
-                       <!--<h6 class="logo_subhead">Professional Audio for Post Production</h6>-->
-                   <!--</div>-->
-                    <!--</a>-->
-
-
-
-                <!--</div>-->
+    <div class="row logo">
                 <div class="col-md-12 advert">
                     <a href="#" target="_blank">
                         <img  class="img-responsive" src="http://www.christensenbroadcasting.com/cms/wp-content/uploads/2012/03/test1.jpg" width="800" height="auto"  alt=""/>
@@ -96,5 +71,4 @@
 
 
             </div><!--  logo end-->
-        </div>
-        <!--</div>-->
+

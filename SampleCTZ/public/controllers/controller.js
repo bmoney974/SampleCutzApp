@@ -16,7 +16,7 @@ var myApp = angular.module('myApp',[
                controller: 'AppCtrl'
            })
            .state('account', {
-               url:'/account',
+               url:'/account/:id',
                templateUrl:'partials/account.html',
                controller: 'AppCtrl'
            })
@@ -83,7 +83,8 @@ var myApp = angular.module('myApp',[
             // Allow same origin resource loads.
             'self',
             // Allow loading from our assets domain.  Notice the difference between * and **.
-            'http://samplecutz.com/**'
+            'http://samplecutz.com/**',
+            'https://www.youtube.com/**'
         ]);
     }]);
 
@@ -102,6 +103,8 @@ $scope.username = localStorage.getItem('username');
     };
 
     $scope.isloggedin = !!$scope.username;
+
+
     //wave surfer options
     $scope.options = {
         waveColor      : '#c5c1be',

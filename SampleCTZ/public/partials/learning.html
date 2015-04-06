@@ -1,43 +1,68 @@
-<div class="row main_wrapper">
+<div class="row  ">
     <div class="row page_title" >
-        <div class="col-md-12">
+        <div class="col-md-12 col-sm-12">
             <h2>Learning Center</h2>
         </div>
     </div>
-    <div class="col-md-4 col-sm-4">
-        <div class="panel panel-default video_sidebar">
-            <div class="panel-heading">
-                <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-                Panel content
-            </div>
-        </div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12"><!-- bread crumbs -->
+            <ol class="breadcrumb">
+                <li>&nbsp;</li>
+
+            </ol>
+        </div><!-- bread crumbs end -->
     </div>
-    <div class="col-md-8 col-sm-8">
-        <div class=" row video_wrapper" ng-repeat="video in videos" >
 
-
-                    <div>
-                        <a ui-sref="video_page({id:video._id})">
-                        <img class="vid_thumb" src="{{video.thumbnail_link}}" width="140" height="100"/>
-                        </a>
+  <div class="row">
+      <div class="col-md-4 col-sm-4 video_sidebar_pad">
+          <div class="panel panel-default sidebar_panel ">
+              <div class="panel-heading">
+                  <h3 class="panel-title">Panel title</h3>
+              </div>
+              <div class="panel-body">
+                  Panel content
+              </div>
+          </div>
+      </div>
+      <div class="col-md-8 col-sm-8">
+          <div class="panel panel-default video_list_panel">
+              <div class="panel-heading">Video Tutorials</div>
+              <div class="panel-body">
+                  <div class=" row video_wrapper" ng-repeat="video in videos" >
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 video_list_title">
+                            <a class="clear_link" ui-sref="video_page({id:video._id})">
+                                <h3>{{video.name}}</h3>
+                            </a>
+                        </div>
                     </div>
 
-                    <div class=" video_info">
-                        <a ui-sref="video_page({id:video._id})">
-                        <h4>{{video.name}}</h4>
+                        <div class="col-sm-3">
+                            <div class="featured_video_thumb">
+                                <a ui-sref="video_page({id:video._id})">
+                                    <img class="img-responsive" src="{{video.thumbnail_link}}" width="100%" height="auto"/>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class=" col-sm-9 ">
+
+                            <a class="clear_link" ui-sref="video_page({id:video._id})">
+                                <p>{{video.description}}</p>
                             </a>
-                        <a ui-sref="video_page({id:video._id})">
-                        <p>{{video.description}}</p>
-                            </a>
-                    </div>
+                        </div>
 
 
 
-        </div>
 
-    </div>
+                  </div>
+              </div>
+          </div>
+
+
+      </div>
+  </div>
 
 
 

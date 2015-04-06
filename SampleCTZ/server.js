@@ -44,12 +44,25 @@ app.get('/videos', function(req, res){
 
 
 
+
 app.get('/users', function(req, res){
     console.log('I received a request for the users');
     User.find(function(err, docs){
         console.log(docs);
         res.json(docs);
     });
+});
+
+app.get('/users/:id', function(req, res, next){
+    console.log('I received a request for the user ');
+    var id = req.params.id;
+
+    User.where({_id:id})
+        .findOne(function(err, doc){
+            console.log(doc);
+            res.json(doc);
+
+        });
 });
 
 // get data from database

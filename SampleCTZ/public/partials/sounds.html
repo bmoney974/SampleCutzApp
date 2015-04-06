@@ -2,13 +2,13 @@
 
 
     <div class="row page_title" >
-        <div class="col-md-12">
+        <div class="col-md-12 col-sm-12">
             <h2>Audio Library</h2>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-md-12"><!-- bread crumbs -->
+        <div class="col-md-12 col-sm-12"><!-- bread crumbs -->
             <ol class="breadcrumb">
                 <li>&nbsp;</li>
 
@@ -16,66 +16,78 @@
         </div><!-- bread crumbs end -->
     </div>
 
-
-    <div class="row"><!-- sounds wrapper -->
-        <div id="sidebar" class="col-md-4 col-sm-4"><!-- side bar -->
-            <div class="sidebar" data-spy="affix"  data-offset-top="300" >
-                <form class="sidebar-form">
-                    <h3 style="margin-bottom: 30px;">Filter Audio</h3>
-                    <div class="form-group">
-                        <label>Search</label>
-                        <input type="text" data-ng-model="searchSounds" />
-                    </div>
-                    <div class="form-group">
-                        <label>Category</label>
-                        <select ng-model="showCategory">
-                            <option value="" selected>All</option>
-                            <option ng-repeat ="category in categories" value="{{category.name}}">{{category.name}}</option>
-
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Sort By</label>
-                        <select ng-model="orderProp">
-                            <option value="_id">Recent</option>
-                            <option value="name">Name</option>
-                            <option value="bpm">BPM Lowest</option>
-                            <option value="-bpm">BPM Highest</option>
-                        </select>
-                    </div>
-                    <fieldset>
-                        <div ng-repeat="prop in sounds[0] | keys | filter:'genre' " ng-init="filter[prop]={}">
-                            <legend>Genres</legend>
-                            <li style="list-style: none;" class="no-decoration" class="quarter" ng-repeat="opt in getOptionsFor(prop) | filter:'!sound'">
-                                <label>
-                                    <input type="checkbox" type="checkbox" ng-model="filter[prop][opt]" />&nbsp;{{opt}}</label>
-
-                            </li>
-                        </div>
-                    </fieldset>
-                    <br>
-
-                    <div>
-                        <img class="img-responsive sidebar-ad" src="http://samplecutz.com/wp-content/uploads/2015/03/att-ad.png" />
-                    </div>
-                </form>
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="search_bar_wrapper">
+                <div class="form-group search_bar">
+                    <span class="glyphicon glyphicon-search search_text" ></span>
+                    <input class="search_input" type="text" data-ng-model="searchSounds"  placeholder="Search For Audio" />
+                </div>
             </div>
+        </div>
+    </div>
+    <div class="row"><!-- sounds wrapper -->
+        <div id="sidebar" class="col-md-4 col-sm-4 home_left_side"><!-- side bar -->
+
+            <div class="home_left_side">
+                <div class="panel panel-default sidebar_panel">
+                    <div class="panel-heading sidebar_panel_title"><h3 style="margin-bottom: 30px;">Filter Audio</h3></div>
+                    <div class="panel-body panel-body-sidebar">
+                        <form class="sidebar-form">
+
+
+                            <div class="form-group">
+                                <label>Category</label>
+                                <select ng-model="showCategory">
+                                    <option value="" selected>All</option>
+                                    <option ng-repeat ="category in categories" value="{{category.name}}">{{category.name}}</option>
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Sort By</label>
+                                <select ng-model="orderProp">
+                                    <option value="_id">Recent</option>
+                                    <option value="name">Name</option>
+                                    <option value="bpm">BPM Lowest</option>
+                                    <option value="-bpm">BPM Highest</option>
+                                </select>
+                            </div>
+                            <fieldset>
+                                <div ng-repeat="prop in sounds[0] | keys | filter:'genre' " ng-init="filter[prop]={}">
+                                    <legend>Genres</legend>
+                                    <li style="list-style: none;" class="no-decoration" class="quarter" ng-repeat="opt in getOptionsFor(prop) | filter:'!sound'">
+                                        <label>
+                                            <input type="checkbox" type="checkbox" ng-model="filter[prop][opt]" />&nbsp;{{opt}}</label>
+
+                                    </li>
+                                </div>
+                            </fieldset>
+                            <br>
+
+                            <div>
+                                <img class="img-responsive sidebar-ad" src="http://samplecutz.com/wp-content/uploads/2015/03/att-ad.png" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
         </div><!-- side bar end -->
 
         <div class="col-md-8 col-sm-8 sounds-side" style="margin-bottom: 30px;"><!-- sounds -->
-            <div class="row">
-                <div class="col-xs-12 dl_heading">
-                    <h2>Download Audio</h2>
-                </div>
-            </div>
-            <div class=" row player_wrapper" ng-repeat="sound in filtered=(sounds | filter:filterByProperties | orderBy: orderProp | filter:showCategory | filter:searchSounds  )">
-                <div class="col-xs-12 player">
-                    <span class="sound_name"><b><h4>{{sound.name}}</h4></b></span>
-                    <wavesurfer-angular url="sound.audio_link" options="options"></wavesurfer-angular>
-                    <div class="sound_info">
-                        <span class="info"><b>Category:</b> {{sound.category}}</span>
-                       <span class="info"><b>Genre:</b> {{sound.genre}}</span>
-                        <span class="info bpm"><b>{{sound.bpm}}&nbsp;bpm</b></span>
+            <div class="panel panel-default dl_list_panel">
+                <div class="panel-heading dl_heading"><h2>Download Audio</h2></div>
+                <div class="panel-body">
+                    <div class="">
+                        <div class=" row player_wrapper" ng-repeat="sound in filtered=(sounds | filter:filterByProperties | orderBy: orderProp | filter:showCategory | filter:searchSounds  )">
+                            <div class="col-xs-12 player">
+                                <span class="sound_name"><b><h4>{{sound.name}}</h4></b></span>
+                                <wavesurfer-angular url="sound.audio_link" options="options"></wavesurfer-angular>
+                                <div class="sound_info">
+                                    <span class="info"><b>Category:</b> {{sound.category}}</span>
+                                    <span class="info"><b>Genre:</b> {{sound.genre}}</span>
+                                    <span class="info bpm"><b>{{sound.bpm}}&nbsp;bpm</b></span>
                         <span class="info"><a  ng-show="isloggedin" ng-href="{{sound.audio_link}}" download="{{sound.file_name}}" ng-click="dl_window()"><img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/03/55d62a1640ac50dc8544cb4524418f1c.png" alt="download" width="30" height="auto"/><span class="glyphicon glyphicon-download-alt"></span></a>
 
 
@@ -83,10 +95,14 @@
                             <a  ng-hide="isloggedin" ng-click="promptLogin()"><img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/03/55d62a1640ac50dc8544cb4524418f1c.png" alt="download" width="30" height="auto"/><span class="glyphicon glyphicon-download-alt"></span></a>
 
                         </span>
+                                </div>
+                            </div>
+                            <hr/>
+                        </div>
                     </div>
                 </div>
-                <hr/>
             </div>
+
 
 
 
