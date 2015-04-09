@@ -95,6 +95,13 @@ app.post('/users', function(req, res){
 
 app.post('/login', passport.authenticate('local'), function(req, res){
     res.send(200);
+    console.log(res.body);
+});
+
+app.get('/logout', function(req, res){
+    req.logout();
+    res.redirect('/');
+    console.log('logged out');
 });
 
 

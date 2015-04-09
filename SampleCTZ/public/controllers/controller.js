@@ -69,7 +69,12 @@ var myApp = angular.module('myApp',[
                 url:'/login',
                 templateUrl:'partials/login.html',
                 controller: 'LoginCtrl'
-            });
+            })
+            .state('register', {
+                url:'/register',
+                templateUrl:'partials/register.html',
+                controller: 'AppCtrl'
+        });
 
 
 
@@ -92,6 +97,14 @@ var myApp = angular.module('myApp',[
 
 myApp.controller('AppCtrl', function($scope, $http, $state){
     console.log("Hello World from controller");
+
+    $scope.lout = function (){
+        console.log('logged out');
+        localStorage.removeItem('username');
+        window.open('http://localhost:3000/#/', '_self')
+
+
+    };
 
 $scope.username = localStorage.getItem('username');
 
@@ -131,8 +144,14 @@ $scope.username = localStorage.getItem('username');
         $scope.registerUser = function(){
             console.log($scope.user);
             $http.post('/users', $scope.user).success(function(response){
+
+            }).then(function(response){
                 console.log(response);
+                window.open('http://localhost:3000/#/login', '_self');
+
             });
+
+
         };
 
         $http.get('/sounds').success(function(response){

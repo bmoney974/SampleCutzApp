@@ -1,5 +1,23 @@
-<form ng-submit="login()">
-    <input ng-model="username" type="text" placeholder="username">
-    <input ng-model="password" type="password" placeholder="passwor">
-    <button type="submit">signIn</button>
-</form>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="row">
+
+            <div class="col-md-12 col-sm-12">
+                <div class="login_wrapper" >
+                    <div class="form-login">
+                        <h4>Please Login.</h4>
+                        <form class="lgform" ng-submit="login()">
+                            <input ng-model="username" type="text" placeholder="username">
+                            <br /><br />
+                            <input ng-model="password" type="password" placeholder="password">
+                            <br />
+                            <br/>
+                            <button class="btn btn-default" type="submit">SignIn</button>
+                        </form>
+                        <a class="createAccount" ui-sref="register" ><p style="text-align: center">Create Account</p></a>
+                    </div>
+                </div>
+
+            </div>
+
+</div>

@@ -683,3 +683,81 @@ body{
 .video_list_title {
     padding-left: 28px;
 }
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+body {
+    background-color:#fff;
+    -webkit-font-smoothing: antialiased;
+    /*font: normal 14px Roboto,arial,sans-serif;*/
+}
+
+.container {
+    padding: 25px;
+    position: fixed;
+}
+
+.form-login {
+    margin-top:50px;
+    margin-bottom:50px;
+    background-color: #1aacfb;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color:#ffffff;
+    border-width: 5px;
+    box-shadow:0 1px 0 #cfcfcf;
+    width:300px;
+
+}
+
+.lgform input, .lgform button {
+    padding:10px;
+}
+
+.login_wrapper {
+    display: flex;
+   justify-content: center;
+    min-width: 300px;
+}
+
+.lgform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h4 {
+    /*border:0 solid #fff;*/
+    border-bottom-width:1px;
+    padding-bottom:10px;
+    text-align: center;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.sound_name h4 {
+    text-align:left;
+}
+
+.hero_buttons {
+    margin-top:-150px;
+}
+
+.hero_buttons .btn {
+    margin:20px;
+    font-size:16px;
+}
+.createAccount {
+    color:#001dd5;
+}
+
+.createAccount:hover {
+    cursor: pointer;
+}

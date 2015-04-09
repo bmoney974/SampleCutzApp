@@ -5,6 +5,13 @@ var myApp = angular.module('myApp')
                 .then(function(data){
                   console.log(data);
                   localStorage.setItem('username', $scope.username);
+                    window.open('http://localhost:3000/#/audio', '_self')
                 })
-        }
+        };
+
+
+
+
+
+
     });

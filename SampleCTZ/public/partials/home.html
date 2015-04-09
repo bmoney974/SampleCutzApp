@@ -1,5 +1,5 @@
-<div class="main_wrapper">
-    <div class="row" >
+<div class="row ">
+    <div class="" >
 
         <div class="col-md-12 col-sm-12">
 
@@ -25,12 +25,8 @@
                                 <!--</ol>-->
                                 <div class="carousel-inner">
                                     <div class="item active">
-                                        <img class="img-responsive"  src="http://samplecutz.com/wp-content/uploads/2015/03/scz_hero2.jpg" alt="First slide" width="100%" height="auto">
-                                        <div class="carousel-caption">
-                                            <h3 style="text-shadow: 2px 2px black;">
-                                                Royalty Free Downloads</h3>
-                                            <p>&nbsp;</p>
-                                        </div>
+                                        <img class="img-responsive"  src="http://www.samplecutz.com/wp-content/uploads/2015/03/hero_3.jpg" alt="First slide" width="100%" height="auto">
+
                                     </div>
                                     <!--<div class="item">-->
                                     <!--<img src="http://placehold.it/1200x500/9b59b6/8e44ad" alt="Second slide">-->
@@ -56,20 +52,14 @@
                                                                                                      href="#carousel-example-generic" data-slide="next"><span class="glyphicon glyphicon-chevron-right">
                         </span></a>
                                 </div>
-                                <div class="main-text hidden-xs">
+                                <div class=" hidden-xs">
                                     <div class="col-md-12 col-sm-12 text-center">
-              <span class="headline_bg">
-              <h1 class="slider-headline">
-                  Professional Audio for Post Production</h1>
-                </span>
 
-                                        <h2 class="slider_subhead">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;Audio Loops - Background Music - Sound Fx
-                                        </h2>
 
-                                        <div class="">
-                                            <a class="btn btn-primary btn-sm btn-min-block" href="http://www.jquery2dotnet.com/">Login</a>&nbsp;&nbsp;&nbsp;<a class="btn btn-primary btn-sm btn-min-block"
-                                                                                                                                                               href="http://www.jquery2dotnet.com/">Registration</a></div>
+                                        <div class="hero_buttons">
+                                            <a class="btn btn-success btn-sm btn-min-block" ui-sref="login">Login</a>&nbsp;&nbsp;&nbsp;<a class="btn btn-success btn-sm btn-min-block"
+                                                                                                                                                               ui-sref="register">Registration</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -129,7 +119,10 @@
                                                     <span class="info"><b>Category:</b> {{sound.category}}</span>
                                                     <span class="info"><b>Genre:</b> {{sound.genre}}</span>
                                                     <span class="info bpm"><b>{{sound.bpm}}&nbsp;bpm</b></span>
-                                                    <span class="info"><a ng-href="{{sound.audio_link}}" download="{{sound.file_name}}" ng-click="dl_window()"><img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/03/55d62a1640ac50dc8544cb4524418f1c.png" alt="download" width="30" height="auto"/><span class="glyphicon glyphicon-download-alt"></span></a></span>
+                                                    <span class="info bpm"><b>{{sound.bpm}}&nbsp;bpm</b></span>
+                        <span class="info"><a  ng-show="isloggedin" ng-href="{{sound.audio_link}}" download="{{sound.file_name}}" ng-click="dl_window()"><img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/03/55d62a1640ac50dc8544cb4524418f1c.png" alt="download" width="30" height="auto"/><span class="glyphicon glyphicon-download-alt"></span></a>
+
+                            <a  ng-hide="isloggedin" ng-click="promptLogin()"><img class="download" style="margin-left:20px; margin-bottom: 10px;" src="http://samplecutz.com/wp-content/uploads/2015/03/55d62a1640ac50dc8544cb4524418f1c.png" alt="download" width="30" height="auto"/><span class="glyphicon glyphicon-download-alt"></span></a>
                                                 </div>
                                             </div>
                                             <hr/>
@@ -174,6 +167,7 @@
                                             </div>
                                             <button type="submit" class="btn btn-default" ng-click="registerUser()">Register</button>
                                         </form>
+                                        <a class="createAccount" ui-sref="login" ><p style="text-align: center">Login to your account</p></a>
                                     </div>
                                 </div>
                             </div>
