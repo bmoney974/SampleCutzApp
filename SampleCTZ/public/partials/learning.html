@@ -17,19 +17,30 @@
   <div class="row">
       <div class="col-md-4 col-sm-4 video_sidebar_pad">
           <div class="panel panel-default sidebar_panel ">
-              <div class="panel-heading">
-                  <h3 class="panel-title">Panel title</h3>
+              <div class="panel-heading panel_signup_title">
+                  <h2 class=" ">Filter Videos</h2 >
               </div>
               <div class="panel-body">
-                  Panel content
+                  <div class="form-group">
+                      <label>Category</label>
+                      <select ng-model="showVideoCategory">
+                          <option value="" selected>All</option>
+                          <option ng-repeat ="videoCategory in videoCategories" value="{{videoCategory.name}}">{{videoCategory.name}}</option>
+
+                      </select>
+                  </div>
+
+                  <div>
+                      <img class="img-responsive sidebar-ad" src="http://samplecutz.com/wp-content/uploads/2015/03/att-ad.png" />
+                  </div>
               </div>
           </div>
       </div>
       <div class="col-md-8 col-sm-8">
           <div class="panel panel-default video_list_panel">
-              <div class="panel-heading">Video Tutorials</div>
+              <div class="panel-heading panel_signup_title"><h2>Video Tutorials</h2></div>
               <div class="panel-body">
-                  <div class=" row video_wrapper" ng-repeat="video in videos" >
+                  <div class=" row video_wrapper" ng-repeat="video in videos | filter: showVideoCategory" >
                     <div class="row">
                         <div class="col-md-8 col-sm-8 video_list_title">
                             <a class="clear_link" ui-sref="video_page({id:video._id})">

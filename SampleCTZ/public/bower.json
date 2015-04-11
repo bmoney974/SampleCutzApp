@@ -17,6 +17,7 @@
   "dependencies": {
     "angular-audio": "~1.4.1",
     "wavesurfer-angular": "~1.0.1",
-    "angular-utils-pagination": "~0.6.1"
+    "angular-utils-pagination": "~0.6.1",
+    "ng-flow": "~2"
   }
 }

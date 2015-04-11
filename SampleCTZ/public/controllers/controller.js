@@ -1,14 +1,16 @@
 var myApp = angular.module('myApp',[
     'ui.router',
-    'wavesurfer.angular'
+    'wavesurfer.angular',
+'angularUtils.directives.dirPagination',
+    'flow'
 
 
 
 ])
-    .config(['$urlRouterProvider', '$stateProvider', '$sceDelegateProvider', function($urlRouterProvider, $stateProvider, $sceDelegateProvider){
+    .config(['$urlRouterProvider', '$stateProvider', '$sceDelegateProvider','paginationTemplateProvider', function($urlRouterProvider, $stateProvider, $sceDelegateProvider, paginationTemplateProvider){
        $urlRouterProvider.otherwise('/');
 
-
+        paginationTemplateProvider.setPath('bower_components/angular-utils-pagination/dirPagination.tpl.html');
         $stateProvider
            .state('home', {
                url:'/',
@@ -18,7 +20,7 @@ var myApp = angular.module('myApp',[
            .state('account', {
                url:'/account/:id',
                templateUrl:'partials/account.html',
-               controller: 'AppCtrl'
+               controller: 'AccountCtrl'
            })
            .state('download', {
                url:'/download',
@@ -99,10 +101,11 @@ myApp.controller('AppCtrl', function($scope, $http, $state){
     console.log("Hello World from controller");
 
     $scope.lout = function (){
-        console.log('logged out');
-        localStorage.removeItem('username');
-        window.open('http://localhost:3000/#/', '_self')
-
+        $http.post('/logout').then(function () {
+            console.log('logged out');
+            localStorage.removeItem('username');
+            $state.go('home');
+        });
 
     };
 
@@ -147,7 +150,7 @@ $scope.username = localStorage.getItem('username');
 
             }).then(function(response){
                 console.log(response);
-                window.open('http://localhost:3000/#/login', '_self');
+                $state.go('login');
 
             });
 
@@ -167,6 +170,12 @@ $scope.username = localStorage.getItem('username');
                 {name:"Drums" },
                 {name:"Loop"},
                 {name:"One Shots"}
+            ];
+
+            $scope.videoCategories = [
+                {name:"Sound Design" },
+                {name:"Audio Editing"},
+                {name:"Recording"}
             ];
 
 
@@ -274,14 +283,11 @@ $scope.username = localStorage.getItem('username');
         var link = $scope.sound.audio_link ;
         var name = $scope.sound.file_name;
 
-        window.open("http://localhost:3000/#/dl","mywin", "width=300, height=300");
+        window.open("/#/dl","mywin", "width=300, height=300");
 
     };
 
-    $http.get('json/videos.json').success(function(data){
-        $scope.videos = data;
 
-    });
 
 });
 

@@ -15,19 +15,20 @@
             <table align="center" cellpadding="0" cellspacing="0" border="0">
               <tr>
                 <td>
-                  <b>Hi {{users.username}}</b>
+                  <b>Hi {{user.username}}</b>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <img src="http://samplecutz.com/wp-content/uploads/2015/02/Eric-Lanser.png" width="100" height="auto" />
+                  <img ng-src="{{profileImgSrc}}" width="100" height="auto" />
                 </td>
               </tr>
               <tr>
                 <td>
-                  <a href="#">
-                    Upload photo
-                  </a>
+                    <div flow-init="{target:'/upload', uploadMethod: 'POST', testChunks: false }" flow-files-submitted="$flow.upload()" flow-file-success="uploadSuccessDelayed()">
+                        <span flow-btn>Upload File</span>
+                        <!--<img flow-img="$flow.files[0]" />-->
+                    </div>
                 </td>
               </tr>
             </table>
