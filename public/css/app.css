@@ -761,3 +761,9 @@ h4 {
 .createAccount:hover {
     cursor: pointer;
 }
+
+@media screen and (max-width: 599px) {
+    .logo, .advert {
+        margin-top:60px;
+    }
+}
