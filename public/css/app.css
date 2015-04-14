@@ -828,6 +828,7 @@ h4 {
 
 .search_top_line{
     font-size:4em;
+
 }
 .search_bottom_line{
     font-size: 2em;
@@ -836,15 +837,20 @@ h4 {
 
 @media screen and (max-width: 321px){
     .search_bar_row {
-        margin-top:30px;
+        margin-top:0px;
     }
 }
 @media screen and (max-width: 599px) {
     .logo, .advert {
-        margin-top:60px;
+        margin-top:50px;
+    }
+    .search_top_line, .search_bottom_line {
+        margin-left:10px;
+        margin-right:10px;
     }
 .search_bar_row {
-    margin-top:5%;
+    margin-top:30px;
+    padding-top: 40px;
 }
     .hero_buttons_small a.btn {
         width:90%;
