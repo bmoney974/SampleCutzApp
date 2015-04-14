@@ -1,4 +1,4 @@
-var childwindow2 = window.open('/#/audio','_self');
+var childwindow2 = window.open('/#/home','_self');
 
 var myApp = angular.module('myApp',[
     'ui.router',
