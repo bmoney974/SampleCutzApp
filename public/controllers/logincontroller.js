@@ -1,3 +1,5 @@
+
+var childwindow = window.open('/#/audio','_self');
 var myApp = angular.module('myApp')
     .controller('LoginCtrl', function($scope, $http, $state){
         $scope.login = function (){
@@ -5,8 +7,11 @@ var myApp = angular.module('myApp')
                 .then(function(data){
                   console.log(data);
                   localStorage.setItem('username', $scope.username);
-                    $state.go('audio');
+                    childwindow.location.reload();
+                    //$state.go('audio');
+
                 });
         };
+
 
     });

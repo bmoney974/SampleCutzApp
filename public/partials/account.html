@@ -1,78 +1,31 @@
-<div class="row main_wrapper ">
+<div class="row ">
 
 
-  <div class="row page_title">
-    <div class="col-md-12">
-      <h2>My Account</h2>
+    <div class="col-md-12 col-sm-12">
+        <div class="row page_title">
+            <div class="col-md-12">
+                <h2>My Account</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h3><b>Hi {{user.username}}</b></h3>
+                <div class="profile_pic">
+                    <img ng-src="{{profileImgSrc}}" width="100" height="auto" />
+                </div>
+                <div flow-init="{target:'/upload', uploadMethod: 'POST', testChunks: false }" flow-files-submitted="$flow.upload()" flow-file-success="uploadSuccessDelayed()">
+                    <span class="upload_photo" flow-btn>Upload Photo</span>
+                    <!--<img flow-img="$flow.files[0]" />-->
+                </div>
+                <button class="logout_button"  ng-click="lout();">Log Out</button>
+                <!--<button ng-hide="isloggedin" ui-sref="login">Log In</button>-->
+            </div>
+        </div>
+
+
     </div>
-  </div>
 
-  <div class="row profile_wrapper">
-    <div class="col-md-12">
-      <table align="left" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td>
-            <table align="center" cellpadding="0" cellspacing="0" border="0">
-              <tr>
-                <td>
-                  <b>Hi {{user.username}}</b>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img ng-src="{{profileImgSrc}}" width="100" height="auto" />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                    <div flow-init="{target:'/upload', uploadMethod: 'POST', testChunks: false }" flow-files-submitted="$flow.upload()" flow-file-success="uploadSuccessDelayed()">
-                        <span flow-btn>Upload File</span>
-                        <!--<img flow-img="$flow.files[0]" />-->
-                    </div>
-                </td>
-              </tr>
-            </table>
-          </td>
-          <td width="30"></td>
-          <td>
-            <table>
-              <tr>
-                <td>
-                  Standard Membership
-                </td>
-              </tr>
-              <tr><td height="20"></td></tr>
-              <tr>
-                <td>
-                  <button>Upgrade</button>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
 
-  <div class="row cancel" style="margin-bottom: 20px;">
-    <div class="col-md-12">
-      <table align="right" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td>
-            <button ng-show="isloggedin" ng-click="lout()">Log Out</button>
-              <button ng-hide="isloggedin" ui-sref="login">Log In</button>
-          </td>
-        </tr>
-        <tr>
-          <td style="font-size:10px; padding-top:20px;">
-            <a href="#">
-              Cancel Account
-            </a>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
 
 
 </div>

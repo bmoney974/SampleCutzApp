@@ -1,3 +1,5 @@
+var childwindow2 = window.open('/#/audio','_self');
+
 var myApp = angular.module('myApp',[
     'ui.router',
     'wavesurfer.angular',
@@ -104,7 +106,9 @@ myApp.controller('AppCtrl', function($scope, $http, $state){
         $http.post('/logout').then(function () {
             console.log('logged out');
             localStorage.removeItem('username');
-            $state.go('home');
+            childwindow2.location.reload();
+            //$state.go('home');
+
         });
 
     };

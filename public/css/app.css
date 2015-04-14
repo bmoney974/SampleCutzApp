@@ -762,6 +762,22 @@ h4 {
     cursor: pointer;
 }
 
+.logout_button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.upload_photo {
+    margin-top:20px;
+}
+
+.upload_photo:hover {
+    cursor: pointer;
+}
+
+/* =============================================   custom media queries ====================================== */
+
+
 @media screen and (max-width: 599px) {
     .logo, .advert {
         margin-top:60px;
@@ -779,7 +795,6 @@ h4 {
         flex-direction: row;
         justify-content: space-around;
     }
-
 
     .hero_buttons_big {
        display:none;

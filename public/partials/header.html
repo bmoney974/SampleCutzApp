@@ -18,7 +18,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a ui-sref="home">Home <span class="sr-only">(current)</span></a></li>
-                        <li><a ui-sref="account({id:video._id})">My Account</a></li>
+                        <li><a ng-show="isloggedin" ui-sref="account({id:video._id})">My Account</a></li>
                         <li><a ui-sref="audio">Audio Library</a></li>
                         <li><a ui-sref="learning">Learing Center</a></li>
                         <li><a ui-sref="about">About Us</a></li>
