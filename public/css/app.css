@@ -775,6 +775,12 @@ h4 {
     cursor: pointer;
 }
 
+.signup_nav {
+
+    border-radius: 10px;
+    color:#ffffff;
+}
+
 /* =============================================   custom media queries ====================================== */
 
 
