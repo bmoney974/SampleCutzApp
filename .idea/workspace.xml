@@ -1,27 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4856034c-78c5-438b-af40-cf00979f3a37" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/sounds/categories.bson" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/sounds/fs.chunks.bson" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/sounds/fs.files.bson" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/sounds/genres.bson" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/sounds/sounds.bson" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/sounds/system.indexes.bson" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/sounds/users.bson" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/sounds/videos.bson" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/sounds/categories.metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/sounds/fs.chunks.metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/sounds/fs.files.metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/sounds/genres.metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/sounds/sounds.metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/sounds/users.metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/sounds/videos.metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.css" afterPath="$PROJECT_DIR$/public/css/app.css" />
+    <list default="true" id="4856034c-78c5-438b-af40-cf00979f3a37" name="Default" comment="changed margin of mobile home login button to 40 px">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partials/home.html" afterPath="$PROJECT_DIR$/public/partials/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SampleCutzApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/partials/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.125" vertical-offset="678" max-vertical-offset="4305">
-              <caret line="63" column="165" selection-start-line="63" selection-start-column="165" selection-end-line="63" selection-end-column="165" />
+            <state vertical-scroll-proportion="0.6393443" vertical-offset="1698" max-vertical-offset="4290">
+              <caret line="123" column="31" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -95,10 +77,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6777344" vertical-offset="11293" max-vertical-offset="11985">
+            <state vertical-scroll-proportion="0.0" vertical-offset="11293" max-vertical-offset="11985">
               <caret line="776" column="20" selection-start-line="776" selection-start-column="20" selection-end-line="776" selection-end-column="20" />
               <folding />
             </state>
@@ -116,8 +98,8 @@
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/partials/single_video.html" />
-        <option value="$PROJECT_DIR$/public/partials/home.html" />
         <option value="$PROJECT_DIR$/public/css/app.css" />
+        <option value="$PROJECT_DIR$/public/partials/home.html" />
       </list>
     </option>
   </component>
@@ -342,15 +324,28 @@
       <option name="project" value="LOCAL" />
       <updated>1428798667368</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added  mobile home buttons">
+      <created>1428974711443</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1428974711443</updated>
+    </task>
+    <task id="LOCAL-00005" summary="changed margin of mobile home login button to 40 px">
+      <created>1428974905079</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1428974905079</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="22" width="1305" height="874" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32919255" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32919255" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24975222" sideWeight="0.6710145" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -365,7 +360,6 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -392,7 +386,9 @@
     <MESSAGE value="make port variable" />
     <MESSAGE value="changed mete tag for bootstrap" />
     <MESSAGE value="added margin under nav on mobile" />
-    <option name="LAST_COMMIT_MESSAGE" value="added margin under nav on mobile" />
+    <MESSAGE value="added  mobile home buttons" />
+    <MESSAGE value="changed margin of mobile home login button to 40 px" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed margin of mobile home login button to 40 px" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -471,18 +467,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/partials/home.html">
+    <entry file="file://$PROJECT_DIR$/public/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.125" vertical-offset="678" max-vertical-offset="4305">
-          <caret line="63" column="165" selection-start-line="63" selection-start-column="165" selection-end-line="63" selection-end-column="165" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="11293" max-vertical-offset="11985">
+          <caret line="776" column="20" selection-start-line="776" selection-start-column="20" selection-end-line="776" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.css">
+    <entry file="file://$PROJECT_DIR$/public/partials/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6777344" vertical-offset="11293" max-vertical-offset="11985">
-          <caret line="776" column="20" selection-start-line="776" selection-start-column="20" selection-end-line="776" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.6393443" vertical-offset="1698" max-vertical-offset="4290">
+          <caret line="123" column="31" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
           <folding />
         </state>
       </provider>
