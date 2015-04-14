@@ -766,4 +766,29 @@ h4 {
     .logo, .advert {
         margin-top:60px;
     }
+
+    .hero_buttons_small a.btn {
+        width:90%;
+
+    }
+
+
+    .hero_buttons_small {
+        margin-top:20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+
+    .hero_buttons_big {
+       display:none;
+
+    }
+}
+
+@media screen and (min-width: 600px){
+    .hero_buttons_small{
+        display:none;
+    }
 }
