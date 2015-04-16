@@ -1,7 +1,18 @@
 <div class="row ">
+
+    <div class="row logo">
+        <div class="col-md-12 col-sm-12 advert">
+            <a href="#" target="_blank">
+                <img  class="img-responsive" src="http://www.christensenbroadcasting.com/cms/wp-content/uploads/2012/03/test1.jpg" width="800" height="auto"  alt=""/>
+            </a>
+        </div>
+
+
+    </div><!--  logo end-->
+
     <div class="row page_title" >
         <div class="col-md-12">
-            <h2><a style="text-decoration: none; color:#000000;;" ui-sref="learning">Learning Center</a> / {{video.name}}</h2>
+            <h2>Learning Center</h2>
         </div>
     </div>
     <div class="row">
@@ -14,24 +25,38 @@
     </div>
 
     <div class="row">
-        <div class="col-md-4 col-sm-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="video_sidebar_title">
-                        <h3>{{video.name}}</h3>
-                    </div>
+        <div class="col-md-4 col-sm-4 video_sidebar_pad home_left_side">
+            <div class="panel panel-default sidebar_panel ">
+                <div class="panel-heading panel_signup_title">
+                    <h2 class=" ">About this video</h2>
                 </div>
                 <div class="panel-body">
-                    <div class="video_player_description">
+                    <div class="description">
                         <p>{{video.description}}</p>
+                    </div>
+
+                    <div>
+                        <img class="img-responsive sidebar-ad" src="http://samplecutz.com/wp-content/uploads/2015/03/att-ad.png" />
+                    </div>
+                    <div class="backToVids">
+                        <a ui-sref="learning"><h4>Back to videos</h4></a>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="col-md-8 class-sm-8">
-            <div class="embed-responsive embed-responsive-16by9 video_player">
-                <iframe class="embed-responsive-item" src="{{video.video_link}}"></iframe>
+
+            <div class="panel panel-default video_list_panel">
+                <div class="panel-heading video_sidebar_title"><h2>{{video.name}}</h2></div>
+                <div class="panel-body">
+                    <div class="embed-responsive embed-responsive-16by9 video_player">
+                        <iframe class="embed-responsive-item" src="{{video.video_link}}"></iframe>
+                    </div>
+                </div>
             </div>
+
+
         </div>
 
     </div>
