@@ -19,4 +19,17 @@ var myApp = angular.module('myApp')
 
         };
 
+        $scope.updateTest = function () {
+            $http.put('/users', $scope.user).success(function(response){
+
+            }).then(function(response){
+                console.log(response);
+                alert("updated");
+
+            });
+
+        }
+
+
+
     });

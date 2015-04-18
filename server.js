@@ -84,9 +84,28 @@ app.get('/sounds', function(req, res) {
 app.post('/users', function(req, res){
     console.log(req.body);
     var user = new User(req.body);
-
+if (!(req.body.password && req.body.password.length >0)){
+    return res.sendStatus(400);
+}
     user.setPassword(req.body.password, function () {
         user.save(function(){
+            res.sendStatus(200);
+        });
+    });
+
+
+});
+// update password
+app.put('/users', function(req, res){
+    console.log(req.body);
+    //var user = new User(req.body);
+    if (!(req.body.password && req.body.password.length >0)){
+        return res.sendStatus(400);
+    }
+    req.user.username = req.body.username;
+    req.user.email = req.body.email;
+   req.user.setPassword(req.body.password, function () {
+        req.user.save(function(){
             res.sendStatus(200);
         });
     });
@@ -179,7 +198,7 @@ app.post('/upload', multipart(), function(req, res) {
 
             function write(){
                 var writestream = gfs.createWriteStream({
-                    filename: 'profile-' + req.user.username
+                    filename: 'profile-' + req.user._id
                 });
 
                 flow.write(identifier, writestream);
@@ -228,13 +247,13 @@ app.get('/profile-pic', function(req, res, next){
     }
 
     gfs.exist({
-        filename: 'profile-' + req.user.username
+        filename: 'profile-' + req.user._id
     }, function (err, found) {
         if (err) return console.error(err);
 
         if(found) {
             var readstream = gfs.createReadStream({
-            filename: 'profile-' + req.user.username
+            filename: 'profile-' + req.user._id
         });
             readstream.pipe(res);
 

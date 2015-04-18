@@ -1,4 +1,4 @@
-var childwindow2 = window.open('/#/home','_self');
+
 
 var myApp = angular.module('myApp',[
     'ui.router',
@@ -14,11 +14,7 @@ var myApp = angular.module('myApp',[
 
         paginationTemplateProvider.setPath('bower_components/angular-utils-pagination/dirPagination.tpl.html');
         $stateProvider
-           .state('home', {
-               url:'/',
-               templateUrl: 'partials/home.html',
-               controller: 'AppCtrl'
-           })
+
            .state('account', {
                url:'/account/:id',
                templateUrl:'partials/account.html',
@@ -45,7 +41,7 @@ var myApp = angular.module('myApp',[
                controller: 'AppCtrl'
            })
            .state('audio', {
-               url:'/audio',
+               url:'/',
                templateUrl:'partials/sounds.html',
                controller: 'AppCtrl'
            })
@@ -95,7 +91,24 @@ var myApp = angular.module('myApp',[
             'http://samplecutz.com/**',
             'https://www.youtube.com/**'
         ]);
-    }]);
+
+    }]).run(function($rootScope){
+
+
+        $rootScope.refreshLogin = function(){
+            $rootScope.username = localStorage.getItem('username');
+
+            $rootScope.promptLogin = function () {
+                var result = confirm('Please log in to download');
+                if (result){
+                    $state.go('login');
+                }
+            };
+
+            $rootScope.isloggedin = !!$rootScope.username;
+        };
+        $rootScope.refreshLogin();
+    });
 
 
 
@@ -106,23 +119,14 @@ myApp.controller('AppCtrl', function($scope, $http, $state){
         $http.post('/logout').then(function () {
             console.log('logged out');
             localStorage.removeItem('username');
-            childwindow2.location.reload();
-            //$state.go('home');
+           $scope.refreshLogin();
+            $state.go('audio');
 
         });
 
     };
 
-$scope.username = localStorage.getItem('username');
 
-    $scope.promptLogin = function () {
-        var result = confirm('Please log in to download');
-        if (result){
-            $state.go('login');
-        }
-    };
-
-    $scope.isloggedin = !!$scope.username;
 
 
     //wave surfer options
