@@ -588,9 +588,24 @@ body{
     padding:20px;
 }
 
+
+
+
 .search_bar {
     display:flex;
-    -webkit-display:flex;
+    display:-webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    align-items: center;
+    -webkit-align-items: center;
+
+}
+
+.search_row {
+    display:flex;
+    -display:-webkitflex;
     justify-content: center;
     -webkit-justify-content: center;
     flex-direction: row;
@@ -598,7 +613,6 @@ body{
     align-items: center;
     -webkit-align-items: center;
 }
-
 .search_input {
     margin-left: 20px;
     padding:10px;
@@ -611,7 +625,7 @@ body{
 }
 
 .search_bar_wrapper {
-    margin-top:0px;
+
 }
 
 .sidebar_panel {
@@ -739,7 +753,7 @@ body {
 
 .login_wrapper {
     display: flex;
-    webkit-display: flex;
+    display: -webkit-flex;
    justify-content: center;
     -webkit-justify-content: center;
     min-width: 300px;
@@ -748,7 +762,7 @@ body {
 .lgform {
     display: flex;
     -moz-display: flex;
-    -webkit-display: flex;
+    display: -webkit-flex;
     flex-direction: column;
     -moz-flex-direction: column;
     -webkit-flex-direction: column;
