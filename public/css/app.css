@@ -891,9 +891,9 @@ h4 {
     .hero_buttons_small {
         margin-top:40px;
         display: flex;
-        -webkit-display: flex;
+       display:  -webkit-flex;
         flex-direction: row;
-        -webkit-flex-direction: row
+        -webkit-flex-direction: row;
         justify-content: space-around;
         -webkit-justify-content: space-around;
     }
