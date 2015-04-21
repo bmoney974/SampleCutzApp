@@ -1,4 +1,4 @@
-<div class="row ">
+
 
 
     <div class="col-md-12 col-sm-12">
@@ -43,6 +43,7 @@
             </div>
             <div class="col-md-10 col-sm-10">
                     <div class="update_Account">
+                        <h2>Update Account Information</h2>
                         <form ng-submit="updateTest()">
                             <div>
                                 <p>Username</p>
@@ -54,7 +55,12 @@
                             </div>
                             <div>
                                 <p>Password</p>
-                            <input name="password" ng-model="user.password" type="password"  />
+                            <input ng-change="noPassMatch = false" name="password" ng-model="user.password" type="password"  />
+                            </div>
+                            <div>
+                                <p>Confirm Password</p>
+                                <input ng-change="noPassMatch = false" name="password" ng-model="conpassword" type="password"  />
+                                <p ng-show="noPassMatch">Passwords do not match</p>
                             </div>
                             <div class="update_btn">
                                 <input class="btn btn-normal" type="submit" value="Update" />
@@ -81,4 +87,3 @@
 
 
 
-</div>

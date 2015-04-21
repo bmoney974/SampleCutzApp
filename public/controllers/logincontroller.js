@@ -10,7 +10,14 @@ var myApp = angular.module('myApp')
 
                     $state.go('audio');
 
+                },function (data){
+                    if (data.status === 401){
+                        alert("Password Incorrect");
+
+                    }
                 });
+
+
         };
 
 

@@ -126,7 +126,20 @@ myApp.controller('AppCtrl', function($scope, $http, $state){
 
     };
 
+    // password confirm
 
+    $scope.passConfrim = function(){
+        var pass = document.getElementById('password').value();
+        var conpass = document.getElementById('conpassword').value();
+
+        if(pass != conpass){
+            alert("Passwords don't match");
+            return false;
+        }else {
+            document.getElementById('signup').submit();
+        }
+
+    };
 
 
     //wave surfer options
@@ -151,14 +164,29 @@ myApp.controller('AppCtrl', function($scope, $http, $state){
             $scope.users= response;
 
         });
-
-        $scope.registerUser = function(){
+//register
+        $scope.registerUser = function(form){
             console.log($scope.user);
+            if (!form.email.$valid){
+                return;
+            }
+            if( $scope.user.password !== $scope.conpassword){
+                $scope.noPassMatch = true ;
+                return;
+            }
             $http.post('/users', $scope.user).success(function(response){
 
             }).then(function(response){
                 console.log(response);
-                $state.go('login');
+                $http.post('/login', {username:$scope.user.username, password:$scope.user.password})
+                    .then(function(data){
+                        console.log(data);
+                        localStorage.setItem('username', $scope.username);
+                        $scope.refreshLogin();
+
+                        $state.go('account');
+
+                    });
 
             });
 

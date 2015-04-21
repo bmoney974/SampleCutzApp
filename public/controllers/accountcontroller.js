@@ -20,6 +20,10 @@ var myApp = angular.module('myApp')
         };
 
         $scope.updateTest = function () {
+            if( $scope.user.password !== $scope.conpassword){
+                $scope.noPassMatch = true ;
+                return;
+            }
             $http.put('/users', $scope.user).success(function(response){
 
             }).then(function(response){

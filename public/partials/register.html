@@ -1,34 +1,35 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-<div class="row">
+
 
     <div class="col-md-12 col-sm-12">
         <div class="login_wrapper" >
-            <div class="form-login">
+            <div class="form-login" >
                 <h4>Create a FREE Account.</h4>
-                <form>
+                <form name="signup" id="signup" ng-submit="registerUser(signup)">
                     <div class="form-group lgform">
                         <label for="exampleInputEmail1">User Name</label>
                         <input type="text" class="form-control" ng-model="user.username" id="exampleInputEmail1" placeholder="Username">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" ng-model="user.email" id="exampleInputEmail1" placeholder="Email">
+                        <input name="email" type="email" class="form-control" ng-model="user.email" id="exampleInputEmail1" placeholder="Email">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Password</label>
-                        <input type="password" class="form-control" ng-model="user.password" id="exampleInputEmail1" placeholder="Password">
+                        <input type="password" class="form-control" ng-model="user.password" id="password" placeholder="Password">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Confrim Password</label>
-                        <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Confirm Password">
+                        <input type="password" class="form-control" ng-model="conpassword"  placeholder="Confirm Password">
+                        <p ng-show="noPassMatch">Passwords do not match</p>
                     </div>
                     <div class="checkbox">
                         <label>
                             <input type="checkbox"> Terms & Conditions
                         </label>
                     </div>
-                    <button type="submit" class="btn btn-default" ng-click="registerUser()">Register</button>
+                    <button type="submit" class="btn btn-default">Register</button>
                 </form>
                 <a class="createAccount" ui-sref="login" ><p style="text-align: center">Login</p></a>
             </div>
@@ -36,4 +37,3 @@
 
     </div>
 
-</div>
