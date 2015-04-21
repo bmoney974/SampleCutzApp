@@ -98,12 +98,7 @@ var myApp = angular.module('myApp',[
         $rootScope.refreshLogin = function(){
             $rootScope.username = localStorage.getItem('username');
 
-            $rootScope.promptLogin = function () {
-                var result = confirm('Please log in to download');
-                if (result){
-                    $state.go('login');
-                }
-            };
+
 
             $rootScope.isloggedin = !!$rootScope.username;
         };
@@ -114,6 +109,13 @@ var myApp = angular.module('myApp',[
 
 myApp.controller('AppCtrl', function($scope, $http, $state){
     console.log("Hello World from controller");
+
+    $scope.promptLogin = function () {
+        var result = confirm('Please log in to download');
+        if (result){
+            $state.go('login');
+        }
+    };
 
     $scope.lout = function (){
         $http.post('/logout').then(function () {
