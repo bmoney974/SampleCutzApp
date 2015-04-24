@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4856034c-78c5-438b-af40-cf00979f3a37" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/controllers/controller.js" afterPath="$PROJECT_DIR$/public/controllers/controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partials/about.html" afterPath="$PROJECT_DIR$/public/partials/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.css" afterPath="$PROJECT_DIR$/public/css/app.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SampleCutzApp.iws" />
@@ -24,21 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controller.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/controllers/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5565032">
+            <state vertical-scroll-proportion="-9.666667">
               <caret line="115" column="31" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/partials/header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.25">
-              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -76,11 +67,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/css/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.27217743">
+              <caret line="890" column="17" selection-start-line="890" selection-start-column="17" selection-end-line="890" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/partials/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.375">
-              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+            <state vertical-scroll-proportion="-12.166667">
+              <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -139,11 +140,9 @@
         <option value="$PROJECT_DIR$/public/partials/home.html" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/public/css/app.css" />
         <option value="$PROJECT_DIR$/public/controllers/logincontroller.js" />
         <option value="$PROJECT_DIR$/public/controllers/accountcontroller.js" />
         <option value="$PROJECT_DIR$/public/partials/sounds.html" />
-        <option value="$PROJECT_DIR$/public/partials/about.html" />
         <option value="$PROJECT_DIR$/public/partials/header.html" />
         <option value="$PROJECT_DIR$/public/partials/learning.html" />
         <option value="$PROJECT_DIR$/public/partials/login.html" />
@@ -152,6 +151,8 @@
         <option value="$PROJECT_DIR$/public/partials/footer.html" />
         <option value="$PROJECT_DIR$/public/partials/account.html" />
         <option value="$PROJECT_DIR$/public/controllers/controller.js" />
+        <option value="$PROJECT_DIR$/public/partials/about.html" />
+        <option value="$PROJECT_DIR$/public/css/app.css" />
       </list>
     </option>
   </component>
@@ -513,7 +514,13 @@
       <option name="project" value="LOCAL" />
       <updated>1429658238577</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="fixed login to download redirect">
+      <created>1429659036522</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1429659036522</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -581,7 +588,8 @@
     <MESSAGE value="fixed refresh issue" />
     <MESSAGE value="add form validation and fixed loose pages" />
     <MESSAGE value="fixed loose page on account" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed loose page on account" />
+    <MESSAGE value="fixed login to download redirect" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed login to download redirect" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -884,14 +892,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="882" column="12" selection-start-line="882" selection-start-column="12" selection-end-line="882" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/controllers/single_video_controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -912,14 +912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/partials/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375">
-          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -994,8 +986,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/controllers/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5565032">
+        <state vertical-scroll-proportion="-9.666667">
           <caret line="115" column="31" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/partials/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.166667">
+          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27217743">
+          <caret line="890" column="17" selection-start-line="890" selection-start-column="17" selection-end-line="890" selection-end-column="17" />
           <folding />
         </state>
       </provider>
